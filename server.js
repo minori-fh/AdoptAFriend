@@ -49,5 +49,29 @@ axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=9410
         });
     });
 
-    console.log(pmResults);
+    // console.log(pmResults);
+});
+
+axios.get("https://www.rocketdogrescue.org/adopt/adoptees/").then(function(response){
+
+    var $ = cheerio.load(response.data);
+    var rdResults = [];
+
+
+    $(".dog-list").children("li").each(function(i, element){
+
+        var moreInfo = $(element).find("h3").children("a").attr("href")
+        var name = $(element).find("h3").children("a").text()
+        var breed = $(element).find(".dog-details").children(".detail").children("a").text()
+        var imgLink = $(element).children(".shadow").children("img").attr("src")
+
+        rdResults.push({
+            name: name,
+            breed: breed,
+            imgLink: imgLink,
+            moreInfo: moreInfo
+        });
+    });
+
+    // console.log(rdResults);
 });
