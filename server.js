@@ -21,7 +21,7 @@ axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=9410
         });
     });
 
-    console.log(pmResults);
+    // console.log(pmResults);
 });
 
 axios.get("https://www.rocketdogrescue.org/adopt/adoptees/").then(function(response){
@@ -33,7 +33,10 @@ axios.get("https://www.rocketdogrescue.org/adopt/adoptees/").then(function(respo
 
         var moreInfo = $(element).find("h3").children("a").attr("href")
         var name = $(element).find("h3").children("a").text()
-        var breed = $(element).find(".dog-details").children(".detail").children("a").text()
+        var breed1 = $(element).find(".dog-details").children(".detail").children("a").text()
+        var breed2 = breed1.replace(/([A-Z])/g, ', $1')
+        var breed3 = breed2.replace(" , ", " ")
+        var breed = breed3.slice(2)
         var imgLink = $(element).children(".shadow").children("img").attr("src")
 
         rdResults.push({
@@ -57,8 +60,9 @@ axios.get("https://adopt.hssvmil.org/search/searchResults.asp?animalType=3%2C16&
         var moreInfo = "https://adopt.hssvmil.org" + $(element).children(".pic-wrap").children("a").attr("href")
         var imgLink = "https://adopt.hssvmil.org" + $(element).children(".pic-wrap").children("a").children("img").attr("src")
         var name = $(element).children(".name-link").children("a").children(".search-result-name-width").children("#test").text()
-        var breedSplit = $(element).children(".pic-wrap").children(".hovertext").text().split("Wks")
-        var breed = breedSplit[1]
+        var breed1 = $(element).children(".pic-wrap").children(".hovertext").text().trim().split("                ")
+        var breed = breed1[1]
+
 
         hsResults.push({
             name: name,
@@ -68,5 +72,5 @@ axios.get("https://adopt.hssvmil.org/search/searchResults.asp?animalType=3%2C16&
         });
     });
 
-    // console.log(hsResults);
+    console.log(hsResults);
 });
