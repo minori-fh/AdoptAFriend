@@ -1,6 +1,9 @@
 $.getJSON("/doges", function(data){
     console.log(data.length)
     console.log(data)
+
+    var breeds = [];
+
     for (var i = 0; data.length; i++){
 
         var site = data[i].site
@@ -42,5 +45,15 @@ $.getJSON("/doges", function(data){
             )
         }
 
+        if (breeds.indexOf(data[i].breed) < 0){
+
+            breeds.push(data[i].breed)
+
+            $("#dropdown-breed").append(
+                "<button class='dropdown-item' type='button'>" + data[i].breed + "</button>"
+            )
+            
+        }
+        // console.log(breeds)
     };
 });

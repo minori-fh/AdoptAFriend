@@ -24,6 +24,10 @@
     margin-bottom: 3%; 
 }
 
+#sidebar {
+    margin-top: 2%; 
+}
+
 .card-body {
     padding: 3%; 
 }
