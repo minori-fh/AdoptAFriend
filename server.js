@@ -148,6 +148,17 @@ app.get("/", function(req, res){
 
 });
 
+app.get("/home", function(req, res){
+    db.Doge.find({})
+    .then(function(dbDoge){
+        res.send(dbDoge)
+    })
+    .catch(function(err){
+        console.log(err)
+    })
+
+});
+
 // Start the server
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
