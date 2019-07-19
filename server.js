@@ -2,6 +2,7 @@ var express = require("express");
 var cheerio = require("cheerio");
 var axios = require("axios");
 var mongoose = require("mongoose");
+var mongojs = require("mongojs");
 
 // Require models
 var db = require("./models")
@@ -124,6 +125,25 @@ app.get("/doges", function(req, res){
         res.json(err)
     })
 });
+
+app.get("/agency/:agency", function(req, res){
+    db.Doge.find({site: req.params.agency},
+
+    function(error, agency){
+        if (error){
+            console.log(error);
+            res.send(error)
+        } else {
+            console.log(agency)
+            res.send(agency)
+        }
+    }
+    )
+});
+
+// app.get("/breed", function(req, res){
+
+// });
 
 // Start the server
 app.listen(PORT, function() {
