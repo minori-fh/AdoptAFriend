@@ -141,9 +141,19 @@ app.get("/agency/:agency", function(req, res){
     )
 });
 
-// app.get("/breed", function(req, res){
+app.get("/breed/:breed", function(req, res){
+    db.Doge.find({breed: req.params.breed},
 
-// });
+    function(error, breed){
+        if (error){
+            console.log(error);
+        } else {
+            console.log(breed)
+            res.send(breed)
+        }
+    }
+    )
+});
 
 // Start the server
 app.listen(PORT, function() {
