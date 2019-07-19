@@ -22,6 +22,10 @@ mongoose.connect("mongodb://localhost/friends", { useNewUrlParser: true });
 
 app.get("/scrape", function(req, res){
 
+    db.Doge.remove({}, function(err) { 
+        console.log('collection removed') 
+     });
+
     axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search").then(function(response){
     
     var $ = cheerio.load(response.data);
@@ -34,6 +38,7 @@ app.get("/scrape", function(req, res){
                 pmResults.breed = $(element).find("h6").text();
                 pmResults.imgLink = $(element).children(".aap-pet-photo").children("img").attr("src");
                 pmResults.moreInfo = $(element).find("a").attr("href")
+                pmResults.site = "petsMart"
                 
                 db.Doge.create(pmResults)
                 .then(function(dbDoge) {
@@ -63,6 +68,7 @@ app.get("/scrape", function(req, res){
             var breed3 = breed2.replace(" , ", " ")
             rdResults.breed = breed3.slice(2)
             rdResults.imgLink = $(element).children(".shadow").children("img").attr("src")
+            rdResults.site = "rocketDog"
 
             db.Doge.create(rdResults)
             .then(function(dbDoge) {
@@ -89,12 +95,12 @@ app.get("/scrape", function(req, res){
         hsResults.name = $(element).children(".name-link").children("a").children(".search-result-name-width").children("#test").text()
         var breed1 = $(element).children(".pic-wrap").children(".hovertext").text().trim().split("                ")
         hsResults.breed = breed1[1]
+        hsResults.site = "hss"
 
         db.Doge.create(hsResults)
         .then(function(dbDoge) {
             // View the added result in the console
             console.log(dbDoge);
-            couter++
         })
         .catch(function(err) {
             // If an error occurred, log it

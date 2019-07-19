@@ -4,7 +4,7 @@
     float: left; 
     margin-left: 1%; 
     margin-right: 1%; 
-    height: 310px !important; 
+    height: 325px !important; 
 }
 
 .card-text {
@@ -27,4 +27,8 @@
 
 .card-body {
     padding: 3%; 
+}
+
+.logo{
+    float: right; 
 }

@@ -15,6 +15,9 @@ var DogeSchema = new Schema({
     },
     moreInfo: {
         type: String, 
+    },
+    site: {
+        type: String,
     }
 });
 
