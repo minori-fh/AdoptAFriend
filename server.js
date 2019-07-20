@@ -109,6 +109,7 @@ app.get("/scrape", function(req, res){
         });
     
     });
+    
 
     // console.log(hsResults);
     });
