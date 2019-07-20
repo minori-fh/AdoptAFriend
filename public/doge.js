@@ -92,6 +92,13 @@ $(document).on("click",".breed", function(){
     getBreed(breed)
 });
 
+$(document).on("click","#scroll-down",function(){
+    $('html,body').animate({
+        scrollTop: $("#display").offset().top},
+        800); 
+
+});
+
 function getAgency(agency){
     $("#doges").empty();
     $.getJSON("/agency/" + agency, function(data){
