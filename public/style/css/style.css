@@ -41,8 +41,25 @@
     font-family: 'Caveat Brush', cursive;
     color: white !important; 
     font-size: 25px !important; 
+    height: 8vh !important; 
+}
+
+.first-row{
+    background-image: url("../images/main.jpg");
+    height: 92vh; 
+    width: 100%; 
 }
 
 #logo{
     float: left; 
+}
+
+#support{
+    height: 100%; 
+    padding-top: 2%; 
+}
+
+.support{
+    display: block; 
+    margin-top: 5%; 
 }
