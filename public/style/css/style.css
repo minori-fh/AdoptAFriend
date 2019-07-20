@@ -35,3 +35,14 @@
 .logo{
     float: right; 
 }
+
+.navbar {
+    background-color: orange !important; 
+    font-family: 'Caveat Brush', cursive;
+    color: white !important; 
+    font-size: 25px !important; 
+}
+
+#logo{
+    float: left; 
+}
