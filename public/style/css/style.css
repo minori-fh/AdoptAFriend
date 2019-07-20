@@ -17,6 +17,8 @@ body{
 
 .card-title {
     margin-bottom: 1%; 
+    font-family: 'Caveat Brush', cursive !important;
+    font-size: 26px !important; 
 }
 
 .btn {
@@ -67,10 +69,6 @@ body{
     margin: 0px; 
 }
 
-#logo{
-    float: left; 
-}
-
 #support, #description-row{
     height: 88%; 
     padding-top: 2%; 
@@ -101,3 +99,24 @@ body{
     font-family: 'Caveat Brush', cursive;
     font-size: 60px; 
 }
+
+.card-body{
+    position: relative;
+}
+
+.more-info, .logo{
+    position: absolute !important; 
+    bottom: 5px !important; 
+}
+
+.logo{
+    right: 2%; 
+}
+
+.dropdown-header{
+    margin-top: 5%; 
+    font-size: 17px; 
+}
+
+
+
