@@ -3,7 +3,7 @@ body{
 }
 
 .card {
-    width: 18% !important; 
+    width: 23% !important; 
     margin-bottom: 2%; 
     float: left; 
     margin-left: 1%; 
@@ -11,8 +11,13 @@ body{
     height: 325px !important; 
 }
 
+.card-body {
+    height: 45% !important; 
+}
+
 .card-text {
     font-size: 12px !important; 
+    margin-bottom: 2px !important; 
 }
 
 .card-title {
@@ -109,6 +114,11 @@ body{
     bottom: 5px !important; 
 }
 
+.more-info {
+    left: 2px; 
+}
+
+
 .logo{
     right: 2%; 
 }
@@ -118,5 +128,12 @@ body{
     font-size: 17px; 
 }
 
+#see-comment, #write-comment {
+    font-size: 10px; 
+    width: 50%; 
+    margin: 0px; 
+    margin-bottom: 3px; 
+    display: inline-block;
+}
 
 
