@@ -2,6 +2,7 @@ var express = require("express");
 var cheerio = require("cheerio");
 var axios = require("axios");
 var mongoose = require("mongoose");
+var mongojs = require("mongojs");
 
 // Require models
 var db = require("./models")
@@ -108,6 +109,7 @@ app.get("/scrape", function(req, res){
         });
     
     });
+    
 
     // console.log(hsResults);
     });
@@ -123,6 +125,35 @@ app.get("/doges", function(req, res){
     .catch(function(err){
         res.json(err)
     })
+});
+
+app.get("/agency/:agency", function(req, res){
+    db.Doge.find({site: req.params.agency},
+
+    function(error, agency){
+        if (error){
+            console.log(error);
+            res.send(error)
+        } else {
+            console.log(agency)
+            res.send(agency)
+        }
+    }
+    )
+});
+
+app.get("/breed/:breed", function(req, res){
+    db.Doge.find({breed: req.params.breed},
+
+    function(error, breed){
+        if (error){
+            console.log(error);
+        } else {
+            console.log(breed)
+            res.send(breed)
+        }
+    }
+    )
 });
 
 // Start the server
