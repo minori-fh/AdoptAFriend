@@ -20,8 +20,8 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
-                + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<img class ='logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
         }
@@ -32,7 +32,7 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
             )
@@ -44,7 +44,7 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )
@@ -92,6 +92,13 @@ $(document).on("click",".breed", function(){
     getBreed(breed)
 });
 
+$(document).on("click","#scroll-down",function(){
+    $('html,body').animate({
+        scrollTop: $("#display").offset().top},
+        800); 
+
+});
+
 function getAgency(agency){
     $("#doges").empty();
     $.getJSON("/agency/" + agency, function(data){
@@ -105,7 +112,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
@@ -117,7 +124,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
             )
@@ -129,7 +136,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )
@@ -151,7 +158,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
@@ -163,7 +170,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
             )
@@ -175,7 +182,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<a href='" + data[i].moreInfo + "' class='btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )

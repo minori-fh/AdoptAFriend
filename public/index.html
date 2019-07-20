@@ -10,30 +10,59 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Link to CSS -->
     <link rel="stylesheet" href="./style/css/style.css">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet">
     <!-- Link to javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="doge.js"></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Adopt a Friend</span>
+    <nav class="navbar">
+        <span class="mb-0">Adopt a Friend</span>
+        <img id="logo" src="style/images/logo.png" width="40px">
     </nav>
+    <div class="first-row row">
+        <div class="row row1">
+                <div class="col-md-2" id="support">
+                        Agencies we support: 
+                        <img class="support" src="style/images/petsMart.png" width="140px">
+                        <img class="support" src="style/images/rocketDog.jpg" width="100px">
+                        <img class="support" src="style/images/hss.jpg" width="100px">
+                    </div>
+                    <div class="col-md-10" id="description-row">
+                        <p id="description">
+                            Helping San Franciscans<br>
+                            find their new best friend!
+            
+                        </p>
+                    </div>
 
-    <div class = "row">
+        </div>
+        <div class="row row2">
+                <div class="col-md-12">
+                        <p id="search">Start your search...</p>
+                        <img id="scroll-down" src="style/images/scroll-down.png" width="30px">
+                    </div>
+            
+        </div>
+    
+    </div>
+
+    <div class = "row" id="display">
         <div class = "col-md-3" id="sidebar">
                 <div class = "dropdown" id = "dropdown-agency" aria-labelledby="dropdownMenu1"> 
-                    <button class="dropdown-item" type="button" id="see-all"><b>See All</b></button>
+                    <button class="dropdown-header dropdown-item" type="button" id="see-all"><b>SEE ALL</b></button>
                 </div>  
                 
                 <div class = "dropdown" id = "dropdown-agency" aria-labelledby="dropdownMenu1"> 
-                    <span class="dropdown-item-text"><b>Filter by Agency</b></span>
+                    <span class="dropdown-header dropdown-item-text"><b>FILTER BY AGENCY</b></span>
                     <button class="dropdown-item agency" type="button" name="petsMart">PETSMART</button>
                     <button class="dropdown-item agency" type="button" name="rocketDog">Rocket Dog Rescue</button>
                     <button class="dropdown-item agency" type="button" name="hss">Humane Society Silicon Valley</button>
                 </div>  
                 <div class = "dropdown" id = "dropdown-breed" aria-labelledby="dropdownMenu2"> 
-                    <span class="dropdown-item-text"><b>Filter by Breed</b></span>
+                    <span class="dropdown-header dropdown-item-text"><b>FILTER BY BREED</b></span>
 
                 </div>  
 
