@@ -1,4 +1,9 @@
-$.getJSON("/doges", function(data){
+getAll()
+
+function getAll(){
+    $("#doges").empty();
+    
+    $.getJSON("/doges", function(data){
     console.log(data.length)
     console.log(data)
 
@@ -56,6 +61,15 @@ $.getJSON("/doges", function(data){
         }
         // console.log(breeds)
     };
+});
+}
+
+$(document).on("click","#see-all", function(){
+    $.ajax({
+        type: "GET",
+        url: "/doges"
+    });
+    getAll()
 });
 
 $(document).on("click",".agency", function(){
