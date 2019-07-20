@@ -15,6 +15,10 @@ body{
     height: 45% !important; 
 }
 
+.card-img-top {
+    height: 55% !important; 
+}
+
 .card-text {
     font-size: 12px !important; 
     margin-bottom: 2px !important; 

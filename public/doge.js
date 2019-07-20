@@ -115,6 +115,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -127,6 +128,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
@@ -139,6 +141,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -161,6 +164,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -173,6 +177,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
@@ -185,6 +190,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
+                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -193,3 +199,22 @@ function getBreed(breed){
         };
     });
 }
+
+$(document).on("click","#see-comment",function(){
+    var card = $(this).parents(".card")
+    card.children().hide()
+    card.append(
+        "<p class='switch'> Comments: </p>"
+        + "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
+    )
+});
+
+$(document).on("click",".go-back", function(){
+    var card = $(this).parents(".card")
+    card.children().show()
+    $(".switch").hide()
+});
+
+// $(document).on("click","#write-comment",function(){
+//     $(this).parents(".card").empty()
+// });
