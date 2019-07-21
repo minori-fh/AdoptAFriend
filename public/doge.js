@@ -15,7 +15,7 @@ function getAll(){
 
         if(site === "petsMart"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -28,7 +28,7 @@ function getAll(){
         }
         if(site === "rocketDog"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -41,7 +41,7 @@ function getAll(){
         }
         if(site === "hss"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -110,7 +110,7 @@ function getAgency(agency){
 
         if(site === "petsMart"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -123,7 +123,7 @@ function getAgency(agency){
         }
         if(site === "rocketDog"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -136,7 +136,7 @@ function getAgency(agency){
         }
         if(site === "hss"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -159,7 +159,7 @@ function getBreed(breed){
 
         if(site === "petsMart"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -172,7 +172,7 @@ function getBreed(breed){
         }
         if(site === "rocketDog"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -185,7 +185,7 @@ function getBreed(breed){
         }
         if(site === "hss"){
             $("#doges").append(
-                "<div class='card'>"
+                "<div class='card' data-id='" + data[i]._id + "'>"
                 + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
@@ -216,7 +216,7 @@ $(document).on("click","#write-comment",function(){
         "<div class='switch form-group'>"
         +"<label for='exampleFormControlTextarea1'>Write comment:</label>"
         +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
-        +"<p>Submit</p>"
+        +"<p class='submit'>Submit</p>"
         +"</div>"
         +"<button class='switch more-info btn btn-primary go-back'> Go back </button>"
     )
@@ -228,6 +228,24 @@ $(document).on("click",".go-back", function(){
     card.children(".switch").hide()
 });
 
-// $(document).on("click","#write-comment",function(){
-//     $(this).parents(".card").empty()
-// });
+$(document).on("click",".submit", function(){
+    var id = $(this).parents(".card").attr("data-id")
+    var comment = $(this).siblings("textarea").val()
+
+    console.log(id)
+    console.log(comment)
+
+    $.ajax({
+        method: "POST",
+        url: "/comment/" + id,
+        data: {
+            body: comment
+        }
+    })
+    .then(function(data){
+        console.log(data)
+    });
+
+    // empty textarea once user clicks 'submit'
+    $(this).siblings("textarea").val("");
+});
