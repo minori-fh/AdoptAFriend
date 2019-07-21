@@ -139,6 +139,7 @@ body{
     margin-bottom: 3px; 
     display: inline-block;
     color: green; 
+    cursor: default; 
 }
 
 .form-group{
@@ -179,4 +180,10 @@ body{
     bottom: 5%; 
 } */
 
+.submit {
+    color: green; 
+    font-size: 13px; 
+    font-weight: bold; 
+    cursor: default; 
+}
 
