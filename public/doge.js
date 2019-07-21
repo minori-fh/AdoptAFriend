@@ -20,7 +20,7 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class ='logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -33,7 +33,7 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
@@ -46,7 +46,7 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -115,7 +115,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -128,7 +128,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
@@ -141,7 +141,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -164,7 +164,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -177,7 +177,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
                 + "</div> </div>"
@@ -190,7 +190,7 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'> See comments</p><p id='write-comment'>Write comment</p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -260,12 +260,11 @@ $(document).on("click","#see-comment",function(){
 
         if(data.comment){
             console.log(data.comment.body)
-            card.prepend("<p>delete</p>")
-            card.prepend("<p class='switch'>" + data.comment.body + "</p>")
+            card.prepend("<p class='switch comment-body' id='delete'>delete</p>")
+            card.prepend("<p class='switch comment-body' id='main-comment'>" + data.comment.body + "</p>")
 
         } else {
-            card.prepend("<p class='switch'> No comments yet</p>")
+            card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
         }
     });
-
 });
