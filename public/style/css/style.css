@@ -138,6 +138,7 @@ body{
     margin: 0px; 
     margin-bottom: 3px; 
     display: inline-block;
+    color: green; 
 }
 
 .form-group{
@@ -145,6 +146,26 @@ body{
     margin-left: 2%;
     margin-right: 2%; 
 }
+
+.comment-body {
+    padding-left: 3%;
+    padding-right: 3%; 
+}
+
+.delete {
+    color: rgb(179, 6, 6);
+    font-size: 10px; 
+    margin-bottom: 3%; 
+}
+
+#main-comment {
+    margin-bottom: 1%; 
+}
+
+#no-comment {
+    color: green; 
+}
+
 
 /* .go-back, .submit{
     position: absolute; 

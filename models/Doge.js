@@ -18,6 +18,10 @@ var DogeSchema = new Schema({
     },
     site: {
         type: String,
+    },
+    comment: {
+        type: Schema.Types.ObjectId,
+        ref: "Comment"
     }
 });
 

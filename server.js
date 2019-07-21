@@ -2,10 +2,10 @@ var express = require("express");
 var cheerio = require("cheerio");
 var axios = require("axios");
 var mongoose = require("mongoose");
-var mongojs = require("mongojs");
 
 // Require models
 var db = require("./models")
+var Comment = require("./models/Comment")
 
 var PORT = 8080;
 
@@ -24,8 +24,12 @@ mongoose.connect("mongodb://localhost/friends", { useNewUrlParser: true });
 app.get("/scrape", function(req, res){
 
     db.Doge.remove({}, function(err) { 
-        console.log('collection removed') 
+        console.log('DOGE collection removed') 
      });
+
+    db.Comment.remove({}, function(err){
+        console.log('COMMENTS collection removed')
+    });
 
     axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search").then(function(response){
     
@@ -111,13 +115,22 @@ app.get("/scrape", function(req, res){
     });
     
 
-    // console.log(hsResults);
+    console.log(hsResults);
     });
 
     res.send("Scrape Complete");
 });
 
 app.get("/doges", function(req, res){
+
+    // db.Doge.remove({}, function(err) { 
+    //     console.log('collection removed') 
+    //  });
+
+    // db.Comment.remove({}, function(err){
+    //     console.log('COMMENTS collection removed')
+    // });
+
     db.Doge.find({})
     .then(function(dbDoge){
         res.json(dbDoge)
@@ -154,6 +167,43 @@ app.get("/breed/:breed", function(req, res){
         }
     }
     )
+});
+
+// post route for when user submits a comment on a doge
+app.post("/doges/:id", function(req, res){
+    console.log(req.body)
+    db.Comment.create(req.body)
+    .then(function(dbComment){
+        return db.Doge.findOneAndUpdate({ _id: req.params.id }, { comment: dbComment._id }, { new: true });
+    })
+    .then(function(dbDoge){
+        res.json(dbDoge);
+    })
+    .catch(function(err){
+        res.json(err);
+    })
+});
+
+app.get("/doges/:id", function(req, res){
+
+    db.Doge.findOne({ _id: req.params.id })
+        .populate("comment")
+        .then(function(dbDoge){
+            res.json(dbDoge);
+        })
+        .catch(function(err){
+            res.json(err)
+        });
+});
+
+app.put("/doges/:id", function(req, res){
+    db.Doge.update({_id: req.params.id},{$unset: {"comment": ""}})
+    .then(function(dbDoge){
+        res.json(dbDoge)
+    })
+    .catch(function(err){
+        res.json(err)
+    })
 });
 
 // Start the server
