@@ -140,4 +140,22 @@ body{
     display: inline-block;
 }
 
+.form-group{
+    height: 80% !important; 
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+
+/* .go-back, .submit{
+    position: absolute; 
+}
+
+.go-back {
+    bottom: 1%; 
+}
+
+.submit {
+    bottom: 5%; 
+} */
+
 

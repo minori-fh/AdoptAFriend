@@ -209,10 +209,23 @@ $(document).on("click","#see-comment",function(){
     )
 });
 
+$(document).on("click","#write-comment",function(){
+    var card = $(this).parents(".card")
+    card.children().hide()
+    card.append(
+        "<div class='switch form-group'>"
+        +"<label for='exampleFormControlTextarea1'>Write comment:</label>"
+        +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
+        +"<p>Submit</p>"
+        +"</div>"
+        +"<button class='switch more-info btn btn-primary go-back'> Go back </button>"
+    )
+});
+
 $(document).on("click",".go-back", function(){
     var card = $(this).parents(".card")
     card.children().show()
-    $(".switch").hide()
+    card.children(".switch").hide()
 });
 
 // $(document).on("click","#write-comment",function(){
