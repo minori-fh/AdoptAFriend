@@ -170,7 +170,7 @@ app.get("/breed/:breed", function(req, res){
 });
 
 // post route for when user submits a comment on a doge
-app.post("/comment/:id", function(req, res){
+app.post("/doges/:id", function(req, res){
     console.log(req.body)
     db.Comment.create(req.body)
     .then(function(dbComment){
@@ -182,6 +182,18 @@ app.post("/comment/:id", function(req, res){
     .catch(function(err){
         res.json(err);
     })
+});
+
+app.get("/doges/:id", function(req, res){
+
+    db.Doge.findOne({ _id: req.params.id })
+        .populate("comment")
+        .then(function(dbDoge){
+            res.json(dbDoge);
+        })
+        .catch(function(err){
+            res.json(err)
+        });
 });
 
 // Start the server

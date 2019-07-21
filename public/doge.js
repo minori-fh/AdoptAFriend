@@ -200,15 +200,6 @@ function getBreed(breed){
     });
 }
 
-$(document).on("click","#see-comment",function(){
-    var card = $(this).parents(".card")
-    card.children().hide()
-    card.append(
-        "<p class='switch'> Comments: </p>"
-        + "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
-    )
-});
-
 $(document).on("click","#write-comment",function(){
     var card = $(this).parents(".card")
     card.children().hide()
@@ -237,7 +228,7 @@ $(document).on("click",".submit", function(){
 
     $.ajax({
         method: "POST",
-        url: "/comment/" + id,
+        url: "/doges/" + id,
         data: {
             body: comment
         }
@@ -248,4 +239,33 @@ $(document).on("click",".submit", function(){
 
     // empty textarea once user clicks 'submit'
     $(this).siblings("textarea").val("");
+});
+
+$(document).on("click","#see-comment",function(){
+    var id = $(this).parents(".card").attr("data-id")
+    var card = $(this).parents(".card")
+    card.children().hide()
+
+    console.log(id)
+
+    $.ajax({
+        method: "GET",
+        url: "/doges/" + id
+    })
+    .then(function(data){
+        console.log(data)
+        card.append(
+            "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
+        )
+
+        if(data.comment){
+            console.log(data.comment.body)
+            card.prepend("<p>delete</p>")
+            card.prepend("<p class='switch'>" + data.comment.body + "</p>")
+
+        } else {
+            card.prepend("<p class='switch'> No comments yet</p>")
+        }
+    });
+
 });
