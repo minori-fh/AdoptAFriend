@@ -196,6 +196,16 @@ app.get("/doges/:id", function(req, res){
         });
 });
 
+app.put("/doges/:id", function(req, res){
+    db.Doge.update({_id: req.params.id},{$unset: {"comment": ""}})
+    .then(function(dbDoge){
+        res.json(dbDoge)
+    })
+    .catch(function(err){
+        res.json(err)
+    })
+});
+
 // Start the server
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");

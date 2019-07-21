@@ -260,6 +260,29 @@ $(document).on("click","#see-comment",function(){
 
         if(data.comment){
             console.log(data.comment.body)
+            card.prepend("<p class='switch comment-body delete'>delete</p>")
+            card.prepend("<p class='switch comment-body' id='main-comment'>" + data.comment.body + "</p>")
+
+        } else {
+            card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
+        }
+    });
+});
+
+$(document).on("click",".delete", function(){
+    var id = $(this).parents(".card").attr("data-id")
+    console.log(id)
+    var card = $(this).parents(".card")
+    card.children(".comment-body").empty();
+
+    $.ajax({
+        method: "PUT",
+        url: "/doges/" + id
+    })
+    .then(function(data){
+        console.log(data)
+        if(data.comment){
+            console.log(data.comment.body)
             card.prepend("<p class='switch comment-body' id='delete'>delete</p>")
             card.prepend("<p class='switch comment-body' id='main-comment'>" + data.comment.body + "</p>")
 
@@ -267,4 +290,5 @@ $(document).on("click","#see-comment",function(){
             card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
         }
     });
+
 });
