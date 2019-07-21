@@ -3,7 +3,7 @@ body{
 }
 
 .card {
-    width: 18% !important; 
+    width: 23% !important; 
     margin-bottom: 2%; 
     float: left; 
     margin-left: 1%; 
@@ -11,8 +11,17 @@ body{
     height: 325px !important; 
 }
 
+.card-body {
+    height: 45% !important; 
+}
+
+.card-img-top {
+    height: 55% !important; 
+}
+
 .card-text {
     font-size: 12px !important; 
+    margin-bottom: 2px !important; 
 }
 
 .card-title {
@@ -109,6 +118,11 @@ body{
     bottom: 5px !important; 
 }
 
+.more-info {
+    left: 2px; 
+}
+
+
 .logo{
     right: 2%; 
 }
@@ -118,5 +132,30 @@ body{
     font-size: 17px; 
 }
 
+#see-comment, #write-comment {
+    font-size: 10px; 
+    width: 50%; 
+    margin: 0px; 
+    margin-bottom: 3px; 
+    display: inline-block;
+}
+
+.form-group{
+    height: 80% !important; 
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+
+/* .go-back, .submit{
+    position: absolute; 
+}
+
+.go-back {
+    bottom: 1%; 
+}
+
+.submit {
+    bottom: 5%; 
+} */
 
 
