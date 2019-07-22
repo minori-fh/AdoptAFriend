@@ -3,7 +3,7 @@ getAll()
 function getAll(){
     $("#doges").empty();
     
-    $.getJSON("/doges", function(data){
+    $.getJSON("/", function(data){
     console.log(data.length)
     console.log(data)
 

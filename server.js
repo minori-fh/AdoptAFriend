@@ -22,6 +22,25 @@ app.use(express.static("public"));
 mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
 mongoose.connect(MONGODB_URI);
 
+app.get("/", function(req, res){
+
+    // db.Doge.remove({}, function(err) { 
+    //     console.log('collection removed') 
+    //  });
+
+    // db.Comment.remove({}, function(err){
+    //     console.log('COMMENTS collection removed')
+    // });
+
+    db.Doge.find({})
+    .then(function(dbDoge){
+        res.json(dbDoge)
+    })
+    .catch(function(err){
+        res.json(err)
+    })
+});
+
 app.get("/scrape", function(req, res){
 
     // db.Doge.remove({}, function(err) { 
@@ -122,24 +141,24 @@ app.get("/scrape", function(req, res){
     res.send("Scrape Complete");
 });
 
-app.get("/doges", function(req, res){
+// app.get("/doges", function(req, res){
 
-    // db.Doge.remove({}, function(err) { 
-    //     console.log('collection removed') 
-    //  });
+//     // db.Doge.remove({}, function(err) { 
+//     //     console.log('collection removed') 
+//     //  });
 
-    // db.Comment.remove({}, function(err){
-    //     console.log('COMMENTS collection removed')
-    // });
+//     // db.Comment.remove({}, function(err){
+//     //     console.log('COMMENTS collection removed')
+//     // });
 
-    db.Doge.find({})
-    .then(function(dbDoge){
-        res.json(dbDoge)
-    })
-    .catch(function(err){
-        res.json(err)
-    })
-});
+//     db.Doge.find({})
+//     .then(function(dbDoge){
+//         res.json(dbDoge)
+//     })
+//     .catch(function(err){
+//         res.json(err)
+//     })
+// });
 
 app.get("/agency/:agency", function(req, res){
     db.Doge.find({site: req.params.agency},
