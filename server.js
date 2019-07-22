@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to MongoDB
-var MONGODB_URI = "process.env.MONGODB_URI" || "mongodb://localhost/dogedb";
+var MONGODB_URI = "process.env.MONGODB_URI" || "mongodb://localhost:8080/dogedb";
 mongoose.connect(MONGODB_URI);
 
 // mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
