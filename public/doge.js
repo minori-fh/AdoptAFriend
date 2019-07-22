@@ -220,8 +220,10 @@ $(document).on("click",".go-back", function(){
 });
 
 $(document).on("click",".submit", function(){
+    var commentArr = []
     var id = $(this).parents(".card").attr("data-id")
     var comment = $(this).siblings("textarea").val()
+    commentArr.push(comment)
 
     console.log(id)
     console.log(comment)
@@ -258,10 +260,13 @@ $(document).on("click","#see-comment",function(){
             "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
         )
 
-        if(data.comment){
-            console.log(data.comment.body)
-            card.prepend("<p class='switch comment-body delete'>delete</p>")
-            card.prepend("<p class='switch comment-body' id='main-comment'>" + data.comment.body + "</p>")
+        if(data.comment.length > 0){
+
+            for (var i=0; i< data.comment.length; i++){
+                console.log(data.comment[i].body)
+                card.prepend("<p class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</p>")
+                card.prepend("<p class='switch comment-body' id='main-comment' comment-id='"+ data.comment[i]._id + "'>" + data.comment[i].body + "</p>")
+            }
 
         } else {
             card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
@@ -274,21 +279,39 @@ $(document).on("click",".delete", function(){
     console.log(id)
     var card = $(this).parents(".card")
     card.children(".comment-body").empty();
+    var cID = $(this).attr("data-id")
+
+    console.log(cID)
 
     $.ajax({
-        method: "PUT",
-        url: "/doges/" + id
+        method: "DELETE",
+        url: "/doges/comment/" + cID
     })
     .then(function(data){
         console.log(data)
-        if(data.comment){
-            console.log(data.comment.body)
-            card.prepend("<p class='switch comment-body' id='delete'>delete</p>")
-            card.prepend("<p class='switch comment-body' id='main-comment'>" + data.comment.body + "</p>")
 
-        } else {
-            card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
-        }
+        $.ajax({
+            method: "GET",
+            url: "/doges/" + id
+        })
+        .then(function(data){
+            console.log(data)
+            card.append(
+                "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
+            )
+    
+            if(data.comment){
+    
+                for (var i=0; i< data.comment.length; i++){
+                    console.log(data.comment[i].body)
+                    card.prepend("<p class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</p>")
+                    card.prepend("<p class='switch comment-body' id='main-comment' comment-id='"+ data.comment[i]._id + "'>" + data.comment[i].body + "</p>")
+                }
+    
+            } else {
+                card.prepend("<p class='switch comment-body' id='no-comment'><b>No comments yet</b></p>")
+            }
+        });
     });
 
 });

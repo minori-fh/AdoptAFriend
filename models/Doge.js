@@ -19,10 +19,11 @@ var DogeSchema = new Schema({
     site: {
         type: String,
     },
-    comment: {
+    // change to commentSSS
+    comment: [{
         type: Schema.Types.ObjectId,
         ref: "Comment"
-    }
+    }]
 });
 
 var Doge = mongoose.model("Doge", DogeSchema)
