@@ -66,6 +66,12 @@ function getAll(){
     };
 });
 }
+$(document).on("click", "#search", function(){
+    $.ajax({
+        type: "GET",
+        url: "/scrape"
+    });
+});
 
 $(document).on("click","#see-all", function(){
     $.ajax({
