@@ -1,4 +1,5 @@
 getAll()
+$("#display").hide()
 
 function getAll(){
     $("#doges").empty();
@@ -71,6 +72,8 @@ $(document).on("click", "#search", function(){
         type: "GET",
         url: "/scrape"
     });
+
+    $("#display").show()
 });
 
 $(document).on("click","#see-all", function(){
