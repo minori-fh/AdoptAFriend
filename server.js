@@ -19,10 +19,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Connect to MongoDB
-mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
-mongoose.connect(MONGODB_URI);
+// mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
+// mongoose.connect(MONGODB_URI);
 
-app.get("/", function(req, res){
+mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+
+app.get("/doges", function(req, res){
 
     // db.Doge.remove({}, function(err) { 
     //     console.log('collection removed') 
