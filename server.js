@@ -2,6 +2,7 @@ var express = require("express");
 var cheerio = require("cheerio");
 var axios = require("axios");
 var mongoose = require("mongoose");
+var path = require("path");
 
 // Require models
 var db = require("./models")
@@ -10,6 +11,8 @@ var Comment = require("./models/Comment")
 var PORT = 8080;
 
 var app = express();
+// var exphbs = require("express-handlebars");
+// app.engine
 
 //CONFIGURE MIDDLEWARE
 // Parse request body as JSON
@@ -23,6 +26,12 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogedb";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+
+app.get("/", function(req, res){
+
+    console.log("hitting this")
+    res.sendFile(path.join(__dirname + "/public/home.html"))
+});
 
 app.get("/doges", function(req, res){
 
