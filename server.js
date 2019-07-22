@@ -9,7 +9,7 @@ var logger = require("morgan");
 var db = require("./models")
 var Comment = require("./models/Comment")
 
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 
 var app = express();
 // var exphbs = require("express-handlebars");
