@@ -3,6 +3,7 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 var mongoose = require("mongoose");
 var path = require("path");
+var logger = require("morgan");
 
 // Require models
 var db = require("./models")
@@ -16,6 +17,7 @@ var app = express();
 
 //CONFIGURE MIDDLEWARE
 // Parse request body as JSON
+app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
@@ -23,6 +25,8 @@ app.use(express.static("public"));
 
 // Connect to MongoDB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogedb";
+
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
@@ -32,6 +36,10 @@ app.get("/", function(req, res){
     console.log("hitting this")
     res.sendFile(path.join(__dirname + "/public/home.html"))
 });
+
+app.get("/test", function(req, res){
+    res.send("HI");
+})
 
 app.get("/doges", function(req, res){
 
