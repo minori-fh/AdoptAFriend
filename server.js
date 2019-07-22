@@ -23,13 +23,13 @@ mongoose.connect("mongodb://localhost/friends", { useNewUrlParser: true });
 
 app.get("/scrape", function(req, res){
 
-    db.Doge.remove({}, function(err) { 
-        console.log('DOGE collection removed') 
-     });
+    // db.Doge.remove({}, function(err) { 
+    //     console.log('DOGE collection removed') 
+    //  });
 
-    db.Comment.remove({}, function(err){
-        console.log('COMMENTS collection removed')
-    });
+    // db.Comment.remove({}, function(err){
+    //     console.log('COMMENTS collection removed')
+    // });
 
     axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search").then(function(response){
     
@@ -174,7 +174,7 @@ app.post("/doges/:id", function(req, res){
     console.log(req.body)
     db.Comment.create(req.body)
     .then(function(dbComment){
-        return db.Doge.findOneAndUpdate({ _id: req.params.id }, { comment: dbComment._id }, { new: true });
+        return db.Doge.findOneAndUpdate({ _id: req.params.id }, {$push: {comment: dbComment._id}});
     })
     .then(function(dbDoge){
         res.json(dbDoge);
@@ -196,8 +196,8 @@ app.get("/doges/:id", function(req, res){
         });
 });
 
-app.put("/doges/:id", function(req, res){
-    db.Doge.update({_id: req.params.id},{$unset: {"comment": ""}})
+app.delete("/doges/comment/:id", function(req, res){
+    db.Comment.findOneAndRemove({_id: req.params.id})
     .then(function(dbDoge){
         res.json(dbDoge)
     })
