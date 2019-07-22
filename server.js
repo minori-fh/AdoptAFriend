@@ -19,7 +19,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Connect to MongoDB
-mongoose.connect("mongodb://localhost/friends", { useNewUrlParser: true });
+mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 app.get("/scrape", function(req, res){
 
