@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to MongoDB
-mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
-mongoose.connect(MONGODB_URI);
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogedb";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
 
