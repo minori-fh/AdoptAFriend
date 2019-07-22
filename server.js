@@ -18,11 +18,11 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-//Connect to MongoDB
-// mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
-// mongoose.connect(MONGODB_URI);
+// Connect to MongoDB
+mongoose.connect("process.env.MONGODB_URI", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
-mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
 
 app.get("/doges", function(req, res){
 
