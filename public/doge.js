@@ -1,6 +1,7 @@
 getAll()
 $("#display").hide()
 
+// Function to append all doges to HTML DOM
 function getAll(){
     $("#doges").empty();
     
@@ -66,6 +67,8 @@ function getAll(){
     };
 });
 }
+
+// Event handler to perform scrape when user clicks on 'start your search' 
 $(document).on("click", "#search", function(){
     $.ajax({
         type: "GET",
@@ -75,6 +78,7 @@ $(document).on("click", "#search", function(){
     $("#display").show()
 });
 
+// Event handler to get all doges when user clicks 'see all' 
 $(document).on("click","#see-all", function(){
     $.ajax({
         type: "GET",
@@ -83,6 +87,7 @@ $(document).on("click","#see-all", function(){
     getAll()
 });
 
+// Event handler to get doges of a particular agency when user clicks on an agency
 $(document).on("click",".agency", function(){
     var agency = $(this).attr("name");
     console.log(agency)
@@ -93,6 +98,7 @@ $(document).on("click",".agency", function(){
     getAgency(agency)
 });
 
+// Event handler to get all doges of a particular breed when user clicks on a breed 
 $(document).on("click",".breed", function(){
     var breed = $(this).attr("name");
     console.log(breed)
@@ -103,6 +109,7 @@ $(document).on("click",".breed", function(){
     getBreed(breed)
 });
 
+// Event handler for scrolling down animation
 $(document).on("click","#scroll-down",function(){
     $('html,body').animate({
         scrollTop: $("#display").offset().top},
@@ -110,6 +117,7 @@ $(document).on("click","#scroll-down",function(){
 
 });
 
+// Function to append doges of a particular agency to HTML DOM
 function getAgency(agency){
     $("#doges").empty();
     $.getJSON("/agency/" + agency, function(data){
@@ -159,6 +167,7 @@ function getAgency(agency){
     });
 }
 
+// Function to append doges of a particular breed to HTML DOM
 function getBreed(breed){
     $("#doges").empty();
     $.getJSON("/breed/" + breed, function(data){
@@ -208,8 +217,11 @@ function getBreed(breed){
     });
 }
 
+// Event handler for when user clicks on 'write comment'
 $(document).on("click","#write-comment",function(){
     var card = $(this).parents(".card")
+
+    // Hide the doge display in card and append a textarea for user to write his/her comment
     card.children().hide()
     card.append(
         "<div class='switch form-group'>"
@@ -221,12 +233,15 @@ $(document).on("click","#write-comment",function(){
     )
 });
 
+// Event handler for when user clicks 'go back' on the write comment card
 $(document).on("click",".go-back", function(){
     var card = $(this).parents(".card")
+    // Show the original contents of the card and hide the textarea for writing comments
     card.children().show()
     card.children(".switch").hide()
 });
 
+// Event handler for when user clicks 'submit' to submit a comment
 $(document).on("click",".submit", function(){
     var commentArr = []
     var id = $(this).parents(".card").attr("data-id")
@@ -251,6 +266,7 @@ $(document).on("click",".submit", function(){
     $(this).siblings("textarea").val("");
 });
 
+// Event handler for when user clicks on 'see comment' 
 $(document).on("click","#see-comment",function(){
     var id = $(this).parents(".card").attr("data-id")
     var card = $(this).parents(".card")
@@ -282,6 +298,7 @@ $(document).on("click","#see-comment",function(){
     });
 });
 
+// Event handler for when user wishes to delete a particular comment
 $(document).on("click",".delete", function(){
     var id = $(this).parents(".card").attr("data-id")
     console.log(id)
