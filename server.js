@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to MongoDB
-var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://localhost/dogedb";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dogedb";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
