@@ -56,13 +56,13 @@ app.get("/doges", function(req, res){
 app.get("/scrape", function(req, res){
 
     // FOR TESTING ======================
-    // db.Doge.remove({}, function(err) { 
-    //     console.log('DOGE collection removed') 
-    //  });
+    db.Doge.remove({}, function(err) { 
+        console.log('DOGE collection removed') 
+     });
 
-    // db.Comment.remove({}, function(err){
-    //     console.log('COMMENTS collection removed')
-    // });
+    db.Comment.remove({}, function(err){
+        console.log('COMMENTS collection removed')
+    });
 
     // Scraping petsmart site
     axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search").then(function(response){
