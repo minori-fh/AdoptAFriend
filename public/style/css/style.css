@@ -74,6 +74,7 @@ body{
 .first-row{
     background-image: url("../images/main.jpg");
     background-repeat: no-repeat; 
+    background-size: cover; 
     height: 92vh; 
     width: 100%; 
     margin: 0px; 
