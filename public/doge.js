@@ -71,12 +71,12 @@ function getAll(){
 }
 
 // Event handler to perform scrape when user clicks on 'start your search' 
-$(document).on("click", "#scroll-down", function(){
-    $.ajax({
-        type: "GET",
-        url: "/scrape"
-    });
-});
+// $(document).on("click", "#scroll-down", function(){
+//     $.ajax({
+//         type: "GET",
+//         url: "/scrape"
+//     });
+// });
 
 // Event handler to get all doges when user clicks 'see all' 
 $(document).on("click","#see-all", function(){
