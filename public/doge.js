@@ -63,7 +63,6 @@ function getAll(){
             )
             
         }
-        // console.log(breeds)
     };
 });
 }
