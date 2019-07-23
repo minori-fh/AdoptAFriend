@@ -11,8 +11,6 @@ var db = require("./models")
 var PORT = process.env.PORT || 8080;
 
 var app = express();
-// var exphbs = require("express-handlebars");
-// app.engine
 
 //CONFIGURE MIDDLEWARE
 // Parse request body as JSON
@@ -27,16 +25,17 @@ var MONGODB_URI = process.env.MONGOLAB_CHARCOAL_URI || "mongodb://localhost/doge
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
-// mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
-
+// ROUTES: Root route to grab contents of home.html
 app.get("/", function(req, res){
 
     console.log("hitting this")
     res.sendFile(path.join(__dirname + "/public/home.html"))
 });
 
+// ROUTES: Route to get all doges from dogedb
 app.get("/doges", function(req, res){
 
+    // FOR TESTING ======================
     // db.Doge.remove({}, function(err) { 
     //     console.log('collection removed') 
     //  });
@@ -56,6 +55,7 @@ app.get("/doges", function(req, res){
 
 app.get("/scrape", function(req, res){
 
+    // FOR TESTING ======================
     // db.Doge.remove({}, function(err) { 
     //     console.log('DOGE collection removed') 
     //  });
@@ -64,6 +64,7 @@ app.get("/scrape", function(req, res){
     //     console.log('COMMENTS collection removed')
     // });
 
+    // Scraping petsmart site
     axios.get("https://petsmartcharities.org/adopt-a-pet/find-a-pet?city_or_zip=94105&species=dog&other_pets=_none&form_build_id=form-Q8G91jKYwU43iYKOE9O6DUusJ5_BtUw4P1YDdC7PBfU&form_id=adopt_a_pet_search_block_form&op=Search").then(function(response){
     
     var $ = cheerio.load(response.data);
@@ -90,7 +91,7 @@ app.get("/scrape", function(req, res){
         });
     });
 
-
+     // Scraping rocketdogrescue site
     axios.get("https://www.rocketdogrescue.org/adopt/adoptees/").then(function(response){
 
     var $ = cheerio.load(response.data);
@@ -121,6 +122,7 @@ app.get("/scrape", function(req, res){
     // console.log(rdResults);
     });
 
+    // Scraping hssvmil site
     axios.get("https://adopt.hssvmil.org/search/searchResults.asp?animalType=3%2C16&utm%5Fmedium=adopt%5Fnav&datelostfoundyear=%C2%AEionID%3D%2D1&tpage=1&pagesize=15&s=adoption&searchTypeId=4&sortby=6&statusID=3&submitbtn=Find+Animals&task=view&%3F0%26utm%5Fsource=website&utm%5Fterm=dogs&%5Fga=2%2E3286128%2E1129545607%2E1563410065%2D1435790490%2E1563410065").then(function(response){
 
     var $ = cheerio.load(response.data);
@@ -154,25 +156,7 @@ app.get("/scrape", function(req, res){
     res.send("Scrape Complete");
 });
 
-// app.get("/doges", function(req, res){
-
-//     // db.Doge.remove({}, function(err) { 
-//     //     console.log('collection removed') 
-//     //  });
-
-//     // db.Comment.remove({}, function(err){
-//     //     console.log('COMMENTS collection removed')
-//     // });
-
-//     db.Doge.find({})
-//     .then(function(dbDoge){
-//         res.json(dbDoge)
-//     })
-//     .catch(function(err){
-//         res.json(err)
-//     })
-// });
-
+// ROUTES: Route to get doges of a specific agency
 app.get("/agency/:agency", function(req, res){
     db.Doge.find({site: req.params.agency},
 
@@ -188,6 +172,7 @@ app.get("/agency/:agency", function(req, res){
     )
 });
 
+// ROUTES: Route to get doges of a specific breed
 app.get("/breed/:breed", function(req, res){
     db.Doge.find({breed: req.params.breed},
 
@@ -202,7 +187,7 @@ app.get("/breed/:breed", function(req, res){
     )
 });
 
-// post route for when user submits a comment on a doge
+// ROUTES: Post route for when user submits a comment on a doge
 app.post("/doges/:id", function(req, res){
     console.log(req.body)
     db.Comment.create(req.body)
@@ -217,6 +202,7 @@ app.post("/doges/:id", function(req, res){
     })
 });
 
+// ROUTES: Get route for when user wants to see comments on a doge
 app.get("/doges/:id", function(req, res){
 
     db.Doge.findOne({ _id: req.params.id })
@@ -229,6 +215,7 @@ app.get("/doges/:id", function(req, res){
         });
 });
 
+// ROUTES: Delete route for when user wants to delete a specific comment
 app.delete("/doges/comment/:id", function(req, res){
     db.Comment.findOneAndRemove({_id: req.params.id})
     .then(function(dbDoge){
@@ -239,7 +226,7 @@ app.delete("/doges/comment/:id", function(req, res){
     })
 });
 
-// Start the server
+// Starting server
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
 });
