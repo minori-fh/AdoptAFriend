@@ -1,5 +1,4 @@
 getAll()
-$("#display").hide()
 
 // Function to append all doges to HTML DOM
 function getAll(){
@@ -64,18 +63,19 @@ function getAll(){
             )
             
         }
+
+        $("#display").hide()
     };
 });
+
 }
 
 // Event handler to perform scrape when user clicks on 'start your search' 
-$(document).on("click", "#search", function(){
+$(document).on("click", "#scroll-down", function(){
     $.ajax({
         type: "GET",
         url: "/scrape"
     });
-
-    $("#display").show()
 });
 
 // Event handler to get all doges when user clicks 'see all' 
@@ -111,6 +111,8 @@ $(document).on("click",".breed", function(){
 
 // Event handler for scrolling down animation
 $(document).on("click","#scroll-down",function(){
+    $("#display").show()
+
     $('html,body').animate({
         scrollTop: $("#display").offset().top},
         800); 
