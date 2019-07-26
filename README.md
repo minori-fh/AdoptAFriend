@@ -31,27 +31,27 @@ What you will need to install before running this application:
 2. [NPM](https://docs.npmjs.com/cli/install)
 3. [Mongod](https://www.mongodb.com/download-center/community)
 
-Node packages used can be installed afterwards by running npm install on your terminal:
+Node packages used can be installed afterwards by running npm install in your terminal:
 ```
 npm i
 ```
 
 ## Built with: 
-1. HTML 
-2. CSS
-3. Bootstrap
-4. Javascript
-5. jQuery
-6. MongoDB
-8. Node*
+1. [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+2. [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+3. [Bootstrap](https://getbootstrap.com/)
+4. [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+5. [jQuery](https://api.jquery.com/)
+6. [MongoDB](https://docs.mongodb.com/)
+8. [Node*](https://nodejs.org/en/download/)
 
 ## *Node Packages Used
-1. Express
-2. Cheerio
-3. Axios
-4. Mongoose
-5. Path
-6. Logger
+1. [Express](https://expressjs.com/)
+2. [Cheerio](https://www.npmjs.com/package/cheerio)
+3. [Axios](https://www.npmjs.com/package/axios)
+4. [Mongoose](https://mongoosejs.com/docs/)
+5. [Path](https://nodejs.org/api/path.html)
+6. [Logger](https://www.npmjs.com/package/logger)
 
 ## Author(s): 
 1. [Minori Hashimoto](https://github.com/minori-fh)
