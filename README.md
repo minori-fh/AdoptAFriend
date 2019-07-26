@@ -1,9 +1,9 @@
 # AdoptAFriend
 
 ## Description of Site
-"AdoptAFriend" is a full stack application to help San Franciscans find their new best friend (doggo)! 
+"AdoptAFriend" is a full stack application to help San Franciscans find their new best friend (doge)! 
 
-The site was built with data (doggo information) scraped from three dog adoption agency sites in San Francisco (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
+The site was built with data (doge information) scraped from three dog adoption agency sites in San Francisco (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
 
 MongoDB was used to store data and allow users to read, write, and delete comments on specific doggos for him/ her to come back to later. 
 
@@ -21,8 +21,22 @@ Seeing doggos by breed:
 Reading, creating, and deleting comments on doggos: 
 ![Comments](public/style/images/site-images/site4.gif)
 
+## Getting Started
+These instructions will help get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-## Technologies Used
+### Prerequisites 
+What you will need to install before running this application:
+
+1. [NODE](https://nodejs.org/en/download/)
+2. [NPM](https://docs.npmjs.com/cli/install)
+3. [Mongod](https://www.mongodb.com/download-center/community)
+
+Node packages used can be installed afterwards by running npm install on your terminal:
+```
+npm i
+```
+
+## Built with: 
 1. HTML 
 2. CSS
 3. Bootstrap
