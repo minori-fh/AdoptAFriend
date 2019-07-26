@@ -14,11 +14,14 @@ This site was deployed using Heroku with the mongolab add-on.
 
 Initial home page: 
 ![Home page](public/style/images/site-images/site1.gif)
-Seeing doggos by adoption agency: 
+
+Seeing doges by adoption agency: 
 ![By agency](public/style/images/site-images/site2.gif)
-Seeing doggos by breed: 
+
+Seeing doges by breed: 
 ![By breed](public/style/images/site-images/site3.gif)
-Reading, creating, and deleting comments on doggos: 
+
+Reading, creating, and deleting comments on doges: 
 ![Comments](public/style/images/site-images/site4.gif)
 
 ## Getting Started
