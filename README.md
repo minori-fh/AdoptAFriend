@@ -24,6 +24,12 @@ Seeing doges by breed:
 Reading, creating, and deleting comments on doges: 
 ![Comments](public/style/images/site-images/site4.gif)
 
+## Improvements for the Future
+1. Mobile responsiveness
+2. Incorporate user authentication to allow users to save certain dogs on their account to visit later
+3. Ability to update the comments that users have already left on a doge
+4. Refactoring code to use ES6 syntax
+
 ## Getting Started
 These instructions will help get you a copy of the project up and running on your local machine for development and testing purposes. 
 
