@@ -406,9 +406,6 @@ $(document).on("click",".delete", function(){
         })
         .then(function(data){
             console.log(data)
-            card.append(
-                "<button class='switch more-info btn btn-primary go-back'> Go back </button>"
-            )
     
             if(data.comment){
     
