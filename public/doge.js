@@ -315,6 +315,8 @@ $(document).on("click","#write-comment",function(){
         +"<p class='submit'>Submit</p>"
         +"<button class='switch more-info btn go-back'> Go back </button>"
     )
+
+    $(this).siblings(".form-group").children("#comment-empty").remove();
 });
 
 // Event handler for when user clicks 'go back' on the Write comments card
