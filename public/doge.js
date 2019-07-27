@@ -91,7 +91,10 @@ $(document).on("click","#see-all", function(){
 
     getAll();
     $("#display").show()
-  
+
+    $('html,body').animate({
+        scrollTop: $("#display").offset().top},
+        800); 
 });
 
 
