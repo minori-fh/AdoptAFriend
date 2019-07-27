@@ -310,13 +310,11 @@ $(document).on("click","#write-comment",function(){
     card.append(
         "<p class='switch write-comment-description'>Write comments:</p>"
         +"<div class='switch form-group'>"
-        +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
+        +"<textarea class='comment-value form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
         +"</div>"
         +"<p class='submit'>Submit</p>"
         +"<button class='switch more-info btn go-back'> Go back </button>"
     )
-
-    $(this).siblings(".form-group").children("#comment-empty").remove();
 });
 
 // Event handler for when user clicks 'go back' on the Write comments card
@@ -332,7 +330,7 @@ $(document).on("click",".go-back", function(){
 $(document).on("click",".submit", function(){
     var commentArr = []
     var id = $(this).parents(".card").attr("data-id")
-    var comment = $(this).siblings(".form-group").children("textarea").val()
+    var comment = $(this).siblings(".form-group").children(".comment-value").val()
     commentArr.push(comment)
 
     console.log(id)
@@ -341,10 +339,6 @@ $(document).on("click",".submit", function(){
     if (comment === ""){
 
         $(this).siblings(".form-group").siblings(".write-comment-description").text("Comment cannot be empty!")
-
-        // if($(this).siblings(".form-group").children("textarea").val() === "Write comments"){
-        //     $(this).siblings(".form-group").siblings(".write-comment-description").text("Comment cannot be empty!")
-        // } 
 
     } else {
 
@@ -361,7 +355,7 @@ $(document).on("click",".submit", function(){
         });
     
         // empty textarea once user clicks 'submit'
-        $(this).siblings(".form-group").children("textarea").val("");
+        // $(this).siblings(".form-group").children("textarea").val("");
     }
 
 });
