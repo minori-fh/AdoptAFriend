@@ -336,19 +336,25 @@ $(document).on("click",".submit", function(){
     console.log(id)
     console.log(comment)
 
-    $.ajax({
-        method: "POST",
-        url: "/doges/" + id,
-        data: {
-            body: comment
-        }
-    })
-    .then(function(data){
-        console.log(data)
-    });
+    if (comment === ""){
+        $(this).append("Comment cannot be empty")
 
-    // empty textarea once user clicks 'submit'
-    $(this).siblings("textarea").val("");
+    } else {
+        $.ajax({
+            method: "POST",
+            url: "/doges/" + id,
+            data: {
+                body: comment
+            }
+        })
+        .then(function(data){
+            console.log(data)
+        });
+    
+        // empty textarea once user clicks 'submit'
+        $(this).siblings(".form-group").children("textarea").val("");
+    }
+
 });
 
 // Event handler for when user clicks on 'see comment' 
