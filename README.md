@@ -5,9 +5,42 @@
 
 The site was built with data (dog information) scraped from three dog adoption agency sites in San Francisco (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
 
-MongoDB was used to store data and allow users to read, write, and delete comments on specific doggos for him/ her to come back to later. 
+MongoDB was used to store data and allow users to read, write, and delete comments on specific dogs for him/ her to come back to later. 
 
-This site was deployed using Heroku with the mongolab add-on. 
+**MongoDB Models**
+Doge Schema
+```
+var DogeSchema = new Schema({
+    name: {
+        type: String,
+    },
+    breed: {
+        type: String, 
+    },
+    imgLink: {
+        type: String,
+    },
+    moreInfo: {
+        type: String, 
+    },
+    site: {
+        type: String,
+    },
+    comment: [{
+        type: Schema.Types.ObjectId,
+        ref: "Comment"
+    }]
+});
+```
+Comment
+```
+var CommentSchema = new Schema({
+    body: {
+        type: String,
+        required: true
+    }
+})
+```
 
 ## Pictures of Site
 [Click here to visit site](https://adopt-a-friend.herokuapp.com/)
