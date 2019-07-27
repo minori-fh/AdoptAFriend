@@ -23,7 +23,7 @@ function getAll(){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class ='logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
@@ -36,8 +36,8 @@ function getAll(){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
-                + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
             )
         }
@@ -49,7 +49,7 @@ function getAll(){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )
@@ -135,7 +135,7 @@ function getAgency(agency){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
@@ -148,8 +148,8 @@ function getAgency(agency){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
-                + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
             )
         }
@@ -161,7 +161,7 @@ function getAgency(agency){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )
@@ -185,7 +185,7 @@ function getBreed(breed){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
             )
@@ -198,8 +198,8 @@ function getBreed(breed){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
-                + "<img class = 'logo' src='style/images/rocketDog.jpg' width='40px'>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
             )
         }
@@ -211,7 +211,7 @@ function getBreed(breed){
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
                 + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
-                + "<a href='" + data[i].moreInfo + "' class='more-info btn btn-primary'> Visit Site </a>"
+                + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
             )

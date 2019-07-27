@@ -101,9 +101,13 @@ body{
     margin-right: 8%; 
 }
 
+/* Display elements styling */
+/* Doge display card element */
+#doges {
+    margin-top: 3%; 
+    margin-bottom: 3%; 
+}
 
-
-/* ~~~~~~~~~~~~~ */
 .card {
     width: 23% !important; 
     margin-bottom: 2%; 
@@ -114,7 +118,9 @@ body{
 }
 
 .card-body {
+    padding: 3%; 
     height: 45% !important; 
+    position: relative;
 }
 
 .card-img-top {
@@ -132,50 +138,30 @@ body{
     font-size: 26px !important; 
 }
 
-#doges {
-    margin-top: 3%; 
-    margin-bottom: 3%; 
-}
-
-#sidebar {
-    margin-top: 2%; 
-}
-
-.card-body {
-    padding: 3%; 
-}
-
 .logo{
     float: right; 
 }
 
-.navbar {
-    /* background-color: orange !important;  */
-    font-family: 'Caveat Brush', cursive;
-    color: black !important; 
-    font-size: 33px !important; 
-    height: 8vh !important; 
+.visit-site-btn{
+    background-color: rgb(255, 141, 141) !important;
+    color: white; 
+    font-weight: bold; 
+    border-radius: 25px !important; 
+    font-size: 14px !important;  
+    font-family: 'Heebo', sans-serif;
+    left: 2px; 
 }
 
-.row {
-    width: 100%; 
+.visit-site-btn, .logo{
+    position: absolute !important; 
+    bottom: 5px !important; 
 }
 
-.row1{
-    height: 82vh
-}
 
-.row2{
-    height: 10vh; 
-}
 
-.first-row{
-    /* background-image: url("../images/main.jpg");
-    background-repeat: no-repeat; 
-    background-size: cover;  */
-    height: 92vh; 
-    width: 100%; 
-    margin: 0px; 
+/* ~~~~~~~~~~~~~ */
+#sidebar {
+    margin-top: 2%; 
 }
 
 #support, #description-row{
@@ -194,34 +180,12 @@ body{
     margin-top: 5%; 
 }
 
-#scroll-down{
-    margin-left: 50%;  
-}
-
-#search{
-    margin-left: 46%; 
-    font-weight: bold; 
-}
 
 #description{
     float:right; 
     font-family: 'Caveat Brush', cursive;
     font-size: 60px; 
 }
-
-.card-body{
-    position: relative;
-}
-
-.more-info, .logo{
-    position: absolute !important; 
-    bottom: 5px !important; 
-}
-
-.more-info {
-    left: 2px; 
-}
-
 
 .logo{
     right: 2%; 
@@ -266,19 +230,6 @@ body{
 #no-comment {
     color: green; 
 }
-
-
-/* .go-back, .submit{
-    position: absolute; 
-}
-
-.go-back {
-    bottom: 1%; 
-}
-
-.submit {
-    bottom: 5%; 
-} */
 
 .submit {
     color: green; 
