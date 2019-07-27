@@ -3,7 +3,7 @@
 ## Description of Site
 "AdoptAFriend" is a full stack application to help San Franciscans find their new best friend (doge)! 
 
-The site was built with data (doge information) scraped from three dog adoption agency sites in San Francisco (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
+The site was built with data (dog information) scraped from three dog adoption agency sites in San Francisco (Petsmart, Rocket Dog Rescue, and Humane Society of Silicon Valley) using Cheerio (node package). 
 
 MongoDB was used to store data and allow users to read, write, and delete comments on specific doggos for him/ her to come back to later. 
 
@@ -12,22 +12,24 @@ This site was deployed using Heroku with the mongolab add-on.
 ## Pictures of Site
 [Click here to visit site](https://adopt-a-friend.herokuapp.com/)
 
-Initial home page: 
+**Initial home page:**
 ![Home page](public/style/images/site-images/site1.png)
 
-Seeing doges by adoption agency or by breed: 
+**Seeing dogs by adoption agency or by breed:**
 ![By agency](public/style/images/site-images/site2.gif)
 
-Reading, creating, and deleting comments on dogs: 
+**Reading, creating, and deleting comments on dogs:** 
 ![By breed](public/style/images/site-images/site3.gif)
 
-Form validation to ensure that comments are not empty: 
+**Form validation to ensure that comments are not empty:** 
 ![Comments](public/style/images/site-images/site4.gif)
 
 ## Improvements for the Future
-1. Mobile responsiveness
+Some improvements that I would like to make to this application provided more time: 
+
+1. Mobile responsiveness for the sidemenu 
 2. Incorporate user authentication to allow users to save certain dogs on their account to visit later
-3. Ability to update the comments that users have already left on a doge
+3. Ability to update the comments that users have already left on a dog
 4. Refactoring code to use ES6 syntax
 
 ## Getting Started

@@ -19,7 +19,6 @@ var DogeSchema = new Schema({
     site: {
         type: String,
     },
-    // change to commentSSS
     comment: [{
         type: Schema.Types.ObjectId,
         ref: "Comment"
