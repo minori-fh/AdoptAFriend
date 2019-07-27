@@ -88,6 +88,7 @@ $(document).on("click","#see-all", function(){
         type: "GET",
         url: "/doges"
     });
+    $("#display").show()
     getAll()
     $("#display").show()
 });
