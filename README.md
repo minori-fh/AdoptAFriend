@@ -1,4 +1,4 @@
-# AdoptAFriend
+# AdoptAFriend :dog:
 
 ## Description of Site
 "AdoptAFriend" is a full stack application to help San Franciscans find their new best friend (doge)! 
@@ -8,6 +8,7 @@ The site was built with data (dog information) scraped from three dog adoption a
 MongoDB was used to store data and allow users to read, write, and delete comments on specific dogs for him/ her to come back to later. 
 
 **MongoDB Models**
+
 Doge Schema
 ```
 var DogeSchema = new Schema({
@@ -32,7 +33,8 @@ var DogeSchema = new Schema({
     }]
 });
 ```
-Comment
+Comment Schema
+
 ```
 var CommentSchema = new Schema({
     body: {
