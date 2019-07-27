@@ -118,6 +118,23 @@ body{
 /* Sidebar elements styling */
 #sidebar {
     margin-top: 2%; 
+    font-family: 'Lato', sans-serif;
+    color: white !important; 
+}
+
+.dropdown-header{
+    margin-top: 5%; 
+    font-size: 17px; 
+    color: white !important; 
+    border-bottom: solid white 3px !important;  
+}
+
+.dropdown-item {
+    color: white !important; 
+}
+
+.dropdown-item:hover {
+    color: black !important; 
 }
 
 /* Doge display card element */
@@ -173,28 +190,19 @@ body{
     padding-bottom: 2px !important; 
 }
 
+.go-back {
+    background-color: rgb(37, 37, 65) !important;
+    color: white !important; 
+    font-size: 14px !important;  
+    font-family: 'Lato', sans-serif;
+    width: 40%; 
+    position: relative; 
+    bottom: 4px; 
+    left: 4px; 
+}
+
 
 /* ~~~~~~~~~~~~~ */
-#sidebar {
-    margin-top: 2%; 
-    font-family: 'Lato', sans-serif;
-    color: white !important; 
-}
-
-.dropdown-header{
-    margin-top: 5%; 
-    font-size: 17px; 
-    color: white !important; 
-    border-bottom: solid white 3px !important;  
-}
-
-.dropdown-item {
-    color: white !important; 
-}
-
-.dropdown-item:hover {
-    color: black !important; 
-}
 
 #see-comment, #write-comment {
     font-size: 10px; 
