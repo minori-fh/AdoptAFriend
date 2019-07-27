@@ -229,7 +229,6 @@ body{
 
 #write-comment {
     background-color: white !important; 
-    border: solid grey 1px !important; 
     color: rgb(62, 167, 62) !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
