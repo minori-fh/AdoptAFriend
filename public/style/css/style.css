@@ -222,15 +222,15 @@ body{
     color: white !important; 
     font-size: 12px !important;  
     font-family: 'Lato', sans-serif;
-    width: 50%; 
+    width: 45%; 
     border: none !important; 
-    border-radius: 5px !important; 
+    border-radius: 2px !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #write-comment {
     background-color: white !important; 
-    color: rgb(100, 187, 100) !important; 
+    color: rgb(37, 37, 65) !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: 2%; 
 }
