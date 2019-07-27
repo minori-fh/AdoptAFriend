@@ -2,6 +2,108 @@ body{
     box-sizing: border-box; 
 }
 
+#home-page {
+    background: linear-gradient(170deg, rgb(164, 209, 219) 50%, white 50%);
+    height: 100vh; 
+    width: 100%; 
+    max-width: 100%; 
+}
+
+/* Nav styling */
+#nav-header{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px; 
+    margin-right: auto !important; 
+    margin-left: 1%; 
+}
+
+#nav-search-btn {
+    background-color: rgb(255, 141, 141) !important;
+    color: white; 
+    font-weight: bold;  
+    border-radius: 25px !important; 
+    font-size: 14px !important; 
+    font-family: 'Heebo', sans-serif;
+}
+
+.row {
+    width: 100%;
+    max-width: 100%; 
+}
+
+/* Home page styling */
+.home-title, .home-description, .home-logo, .home-tagline, .support-header{
+    text-align: center !important; 
+    color: rgb(37, 37, 65); 
+}
+
+.home-title {
+    font-size: 50px; 
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+}
+
+.home-description {
+    font-size: 30px; 
+    font-family: 'Lato', sans-serif;
+}
+
+.home-tagline{
+    font-size: 20px; 
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 141, 141); 
+}
+
+.support-header{
+    font-size: 30px; 
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 3%; 
+
+}
+
+.support-logo{
+    display: inline-block;
+}
+
+/* Jumbotron (agencies we support) styling */
+.jumbotron {
+    width: 60% !important; 
+    margin: 0 auto !important; 
+    height: 35% !important; 
+    margin-top: 5% !important; 
+    padding: 1% !important; 
+    border-radius: 15px !important; 
+    background-color: white !important; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#card-search-btn, #card-learn-btn {
+    background-color: rgb(255, 141, 141) !important;
+    color: white; 
+    font-weight: bold; 
+    border-radius: 25px !important; 
+    font-size: 14px !important;  
+    margin: 0 auto !important; 
+    margin-top: 2% !important; 
+    font-family: 'Heebo', sans-serif;
+}
+
+#card-learn-btn {
+    background-color: rgb(37, 37, 65) !important;
+}
+
+.text-center {
+    margin: 0 auto !important;  
+}
+
+#petsMart-logo {
+    margin-left: 8%; 
+    margin-right: 8%; 
+}
+
+
+
+/* ~~~~~~~~~~~~~ */
 .card {
     width: 23% !important; 
     margin-bottom: 2%; 
@@ -30,10 +132,6 @@ body{
     font-size: 26px !important; 
 }
 
-.btn {
-    font-size: 10px !important; 
-}
-
 #doges {
     margin-top: 3%; 
     margin-bottom: 3%; 
@@ -52,7 +150,7 @@ body{
 }
 
 .navbar {
-    background-color: orange !important; 
+    /* background-color: orange !important;  */
     font-family: 'Caveat Brush', cursive;
     color: black !important; 
     font-size: 33px !important; 
@@ -72,9 +170,9 @@ body{
 }
 
 .first-row{
-    background-image: url("../images/main.jpg");
+    /* background-image: url("../images/main.jpg");
     background-repeat: no-repeat; 
-    background-size: cover; 
+    background-size: cover;  */
     height: 92vh; 
     width: 100%; 
     margin: 0px; 

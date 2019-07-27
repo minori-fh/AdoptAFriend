@@ -1,6 +1,7 @@
 getAll()
 
 // Function to append all doges to HTML DOM
+
 function getAll(){
     $("#doges").empty();
     
@@ -110,7 +111,7 @@ $(document).on("click",".breed", function(){
 });
 
 // Event handler for scrolling down animation
-$(document).on("click","#scroll-down",function(){
+$(document).on("click",".search",function(){
     $("#display").show()
 
     $('html,body').animate({
