@@ -340,9 +340,11 @@ $(document).on("click",".submit", function(){
 
     if (comment === ""){
 
-        if($(this).siblings(".form-group").children("textarea").val() === ""){
-            $(this).siblings(".form-group").children("textarea").prepend("<p class='comment-empty'> Comment cannot be empty! </p>")
-        } 
+        $(this).siblings(".form-group").siblings(".write-comment-description").text("Comment cannot be empty!")
+
+        // if($(this).siblings(".form-group").children("textarea").val() === "Write comments"){
+        //     $(this).siblings(".form-group").siblings(".write-comment-description").text("Comment cannot be empty!")
+        // } 
 
     } else {
 
