@@ -70,9 +70,9 @@ function getAll(){
 
         $("#display").hide()
     };
-});
+    });
 
-}
+};
 
 // Event handler to perform scrape when user clicks on 'start your search' 
 // $(document).on("click", "#scroll-down", function(){
@@ -153,6 +153,7 @@ $(document).on("click","#see-all", function(){
             
         }
     };
+});
 
 
 // Event handler to get doges of a particular agency when user clicks on an agency
