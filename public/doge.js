@@ -342,7 +342,7 @@ $(document).on("click",".submit", function(){
 
         console.log("emptyAF")
         console.log($(this).siblings(".form-group").children("#comment-empty").length)
-        if($(this).siblings(".form-group").children("#comment-empty").length === 0){
+        if($(this).siblings(".form-group").children("#comment-empty").length === 0 || $(this).siblings(".form-group").children("#comment-empty").text() === ""){
             $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Comment cannot be empty!<p>")
             console.log($(this).siblings(".form-group").children("#comment-empty").text())
         } 
