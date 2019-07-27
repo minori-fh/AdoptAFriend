@@ -84,17 +84,81 @@ function getAll(){
 
 // Event handler to get all doges when user clicks 'see all' 
 $(document).on("click","#see-all", function(){
-    $.ajax({
-        type: "GET",
-        url: "/doges"
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "/doges"
+    // });
 
-    getAll();
-    $("#display").show()
+    // getAll();
 
-    $('html,body').animate({
-        scrollTop: $("#display").offset().top},
-        800); 
+    $("#doges").empty();
+
+    $.getJSON("/doges", function(data){
+        console.log(data.length)
+        console.log(data)
+    
+        var breeds = [];
+    
+        for (var i = 0; data.length; i++){
+    
+            var site = data[i].site
+    
+            if(site === "petsMart"){
+                $("#doges").append(
+                    "<div class='card' data-id='" + data[i]._id + "'>"
+                    + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
+                    + "<div class='card-body'>"
+                    + "<h5 class='card-title'>" + data[i].name + "</h5>"
+                    + "<p class='card-text'>" + data[i].breed + "</p>"
+                    + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                    // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
+                    + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                    + "<img class ='logo' src='style/images/petsMart.png' width='70px'>"
+                    + "</div> </div>"
+                )
+            }
+            if(site === "rocketDog"){
+                $("#doges").append(
+                    "<div class='card' data-id='" + data[i]._id + "'>"
+                    + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
+                    + "<div class='card-body'>"
+                    + "<h5 class='card-title'>" + data[i].name + "</h5>"
+                    + "<p class='card-text'>" + data[i].breed + "</p>"
+                    + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                    // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
+                    + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                    + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
+                    + "</div> </div>"
+                )
+            }
+            if(site === "hss"){
+                $("#doges").append(
+                    "<div class='card' data-id='" + data[i]._id + "'>"
+                    + "<img src ='" + data[i].imgLink + "' class='card-img-top'>"
+                    + "<div class='card-body'>"
+                    + "<h5 class='card-title'>" + data[i].name + "</h5>"
+                    + "<p class='card-text'>" + data[i].breed + "</p>"
+                    + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                    // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
+                    + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
+                    + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
+                    + "</div> </div>"
+                )
+            }
+    
+            if (breeds.indexOf(data[i].breed) < 0){
+    
+                breeds.push(data[i].breed)
+    
+                $("#dropdown-breed").append(
+                    "<button class='dropdown-item breed' type='button' name='" + data[i].breed + "'>" + data[i].breed + "</button>"
+                )
+                
+            }
+    
+            $("#display").hide()
+        };
+        });
 });
 
 
