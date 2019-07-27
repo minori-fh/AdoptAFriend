@@ -61,18 +61,17 @@ function getAll(){
 
             breeds.push(data[i].breed)
 
-            // $("#dropdown-breed").append(
-            //     "<button class='dropdown-item breed' type='button' name='" + data[i].breed + "'>" + data[i].breed + "</button>"
-            // )
-            
+            $("#dropdown-breed").append(
+                "<button class='dropdown-item breed' type='button' name='" + data[i].breed + "'>" + data[i].breed + "</button>"
+            )  
         }
 
-        breeds.sort();
-        for (var i=0; i<breeds.length; i++){
-            $("#dropdown-breed").append(
-                "<button class='dropdown-item breed' type='button' name='" + breeds[i] + "'>" + breeds[i] + "</button>"
-            )
-        }
+        // breeds.sort();
+        // for (var i=0; i<breeds.length; i++){
+        //     $("#dropdown-breed").append(
+        //         "<button class='dropdown-item breed' type='button' name='" + breeds[i] + "'>" + breeds[i] + "</button>"
+        //     )
+        // }
 
         $("#display").hide()
     };
