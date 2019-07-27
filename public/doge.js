@@ -156,7 +156,7 @@ $(document).on("click","#see-all", function(){
                 
             }
     
-            $("#display").hide()
+            // $("#display").hide()
         };
         });
 });
