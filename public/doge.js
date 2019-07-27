@@ -328,7 +328,6 @@ $(document).on("click",".go-back", function(){
 
 // Event handler for when user clicks 'submit' to submit a comment
 $(document).on("click",".submit", function(){
-    $(this).siblings(".form-group").children("textarea").val("");
     var commentArr = []
     var id = $(this).parents(".card").attr("data-id")
     var comment = $(this).siblings(".form-group").children("textarea").val()
@@ -339,7 +338,6 @@ $(document).on("click",".submit", function(){
 
     if (comment === ""){
         $(this).siblings(".form-group").append("<p id='comment-empty'>Comment cannot be empty!<p>")
-        $(this).siblings(".form-group").children("textarea").val("");
 
     } else {
         $.ajax({
