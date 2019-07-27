@@ -344,10 +344,9 @@ $(document).on("click",".submit", function(){
         console.log($(this).siblings(".form-group").children("#comment-empty").length)
         if($(this).siblings(".form-group").children("#comment-empty").length === 0){
             $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Comment cannot be empty!<p>")
-        } else if ($(this).siblings(".form-group").children("#comment-empty").length === 1){
-            $(this).siblings(".form-group").children("#comment-empty").remove()
-            $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Please write a comment!<p>")
-        }
+        } 
+
+        setTimeout($(this).siblings(".form-group").children("#comment-empty").remove(), 2000)
 
     } else {
 
