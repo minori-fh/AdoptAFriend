@@ -330,7 +330,7 @@ $(document).on("click",".go-back", function(){
 $(document).on("click",".submit", function(){
     var commentArr = []
     var id = $(this).parents(".card").attr("data-id")
-    var comment = $(this).siblings("textarea").val()
+    var comment = $(this).siblings(".form-group").children("textarea").val()
     commentArr.push(comment)
 
     console.log(id)
