@@ -31,6 +31,13 @@ body{
     max-width: 100%; 
 }
 
+.logo{
+    right: 2%; 
+    float: right; 
+    position: absolute !important; 
+    bottom: 5px !important; 
+}
+
 /* Home page styling */
 .home-title, .home-description, .home-logo, .home-tagline, .support-header{
     text-align: center !important; 
@@ -102,6 +109,11 @@ body{
 }
 
 /* Display elements styling */
+/* Sidebar elements styling */
+#sidebar {
+    margin-top: 2%; 
+}
+
 /* Doge display card element */
 #doges {
     margin-top: 3%; 
@@ -141,10 +153,6 @@ body{
     color: rgb(37, 37, 65); 
 }
 
-.logo{
-    float: right; 
-}
-
 .visit-site-btn{
     background-color: none !important;
     color: rgb(253, 149, 149) !important;  
@@ -157,43 +165,11 @@ body{
     padding-bottom: 2px !important; 
 }
 
-.logo{
-    position: absolute !important; 
-    bottom: 5px !important; 
-}
-
-
 
 /* ~~~~~~~~~~~~~ */
 #sidebar {
     margin-top: 2%; 
-}
-
-#support, #description-row{
-    height: 88%; 
-    padding-top: 2%; 
-    padding-left: 2%; 
-    color: white; 
-}
-
-#support{
-    margin-left: 0px !important; 
-}
-
-.support{
-    display: block; 
-    margin-top: 5%; 
-}
-
-
-#description{
-    float:right; 
-    font-family: 'Caveat Brush', cursive;
-    font-size: 60px; 
-}
-
-.logo{
-    right: 2%; 
+    font-family: 'Lato', sans-serif;
 }
 
 .dropdown-header{
