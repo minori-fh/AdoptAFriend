@@ -192,6 +192,10 @@ body{
     color: white !important; 
 }
 
+.dropdown-item:hover {
+    color: black !important; 
+}
+
 #see-comment, #write-comment {
     font-size: 10px; 
     font-family: 'Heebo', sans-serif;
