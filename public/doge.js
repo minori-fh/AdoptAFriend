@@ -89,6 +89,7 @@ $(document).on("click","#see-all", function(){
         url: "/doges"
     });
     getAll()
+    $("#display").show()
 });
 
 // Event handler to get doges of a particular agency when user clicks on an agency
