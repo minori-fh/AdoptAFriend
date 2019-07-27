@@ -407,7 +407,7 @@ $(document).on("click",".delete", function(){
         .then(function(data){
             console.log(data)
     
-            if(data.comment){
+            if(data.comment.length > 0){
     
                 for (var i=0; i< data.comment.length; i++){
                     console.log(data.comment[i].body)
