@@ -220,9 +220,9 @@ body{
     cursor: default;  */
     background-color: rgb(100, 187, 100) !important;
     color: white !important; 
-    font-size: 12px !important;  
+    font-size: 10px !important;  
     font-family: 'Lato', sans-serif;
-    width: 45%; 
+    width: 43%; 
     border: none !important; 
     border-radius: 4px !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
