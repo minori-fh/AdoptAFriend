@@ -133,6 +133,7 @@ body{
     margin-left: 1%; 
     margin-right: 1%; 
     height: 325px !important; 
+    border: none !important; 
 }
 
 .card-body {
@@ -176,12 +177,18 @@ body{
 #sidebar {
     margin-top: 2%; 
     font-family: 'Lato', sans-serif;
-    color: white; 
+    color: white !important; 
 }
 
 .dropdown-header{
     margin-top: 5%; 
     font-size: 17px; 
+    color: white !important; 
+    border-bottom: solid white 3px !important;  
+}
+
+.dropdown-item {
+    color: white !important; 
 }
 
 #see-comment, #write-comment {
