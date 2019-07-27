@@ -344,9 +344,8 @@ $(document).on("click",".submit", function(){
         console.log($(this).siblings(".form-group").children("#comment-empty").length)
         if($(this).siblings(".form-group").children("#comment-empty").length === 0){
             $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Comment cannot be empty!<p>")
+            setTimeout($(this).siblings(".form-group").children("#comment-empty").remove(), 5000)
         } 
-
-        setTimeout($(this).siblings(".form-group").children("#comment-empty").remove(), 2000)
 
     } else {
 
