@@ -83,14 +83,9 @@ function getAll(){
 
 // Event handler to get all doges when user clicks 'see all' 
 $(document).on("click","#see-all", function(){
-    // $.ajax({
-    //     type: "GET",
-    //     url: "/doges"
-    // });
-
-    // getAll();
 
     $("#doges").empty();
+    $("#dropdown-breed").empty();
 
     $.getJSON("/doges", function(data){
         console.log(data.length)
