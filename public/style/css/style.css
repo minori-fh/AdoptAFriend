@@ -195,10 +195,11 @@ body{
     color: white !important; 
     font-size: 14px !important;  
     font-family: 'Lato', sans-serif;
-    width: 40%; 
+    width: 35%; 
     position: relative; 
-    bottom: 4px; 
-    left: 4px; 
+    bottom: 4px !important; 
+    left: 4px !important; 
+    border: none !important; 
 }
 
 
