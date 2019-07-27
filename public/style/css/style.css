@@ -14,7 +14,7 @@ body{
     max-width: 100%; 
 }
 
-.home-title, .home-description, .home-logo, .home-tagline{
+.home-title, .home-description, .home-logo, .home-tagline, .support-header{
     text-align: center !important; 
     color: rgb(16, 16, 39); 
 }
@@ -34,6 +34,40 @@ body{
     font-size: 20px; 
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 158, 158); 
+}
+
+.support-header{
+    font-size: 30px; 
+    font-family: 'Lato', sans-serif;
+
+}
+
+.support-logo{
+    display: inline-block;
+}
+
+.jumbotron {
+    width: 60% !important; 
+    margin: 0 auto !important; 
+    height: 35% !important; 
+    margin-top: 5% !important; 
+    padding: 1% !important; 
+    background-color: white !important; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#card-search-btn{
+    background-color: rgb(255, 158, 158) !important;
+    color: white; 
+    font-weight: bold; 
+    border-radius: 25px !important; 
+    font-size: 14px !important;  
+    margin: 0 auto !important; 
+    margin-top: 5% !important; 
+}
+
+.text-center {
+    margin: 0 auto !important;  
 }
 
 .card {
@@ -62,10 +96,6 @@ body{
     margin-bottom: 1%; 
     font-family: 'Caveat Brush', cursive !important;
     font-size: 26px !important; 
-}
-
-.btn {
-    font-size: 10px !important; 
 }
 
 #doges {
