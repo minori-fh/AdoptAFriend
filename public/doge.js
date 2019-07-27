@@ -90,8 +90,7 @@ $(document).on("click","#see-all", function(){
     });
 
     getAll();
-    $("#display").hide()
-    $("#display").css("display","unset")
+    $("#display").show()
   
 });
 
