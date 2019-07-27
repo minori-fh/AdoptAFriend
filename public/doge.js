@@ -353,10 +353,10 @@ $(document).on("click",".submit", function(){
         .then(function(data){
             console.log(data)
         });
-    
-        // empty textarea once user clicks 'submit'
-        // $(this).siblings(".form-group").children("textarea").val("");
     }
+
+    // empty textarea once user clicks 'submit'
+    $(this).siblings(".form-group").children(".comment-value").val("");
 
 });
 
