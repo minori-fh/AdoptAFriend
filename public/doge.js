@@ -227,7 +227,7 @@ $(document).on("click","#write-comment",function(){
     // Hide the doge display in card and append a textarea for user to write his/her comment
     card.children().hide()
     card.append(
-        "<label for='exampleFormControlTextarea1' class='write-comment-description>Write comment:</label>"
+        "<p class='write-comment-description>Write comment:</p>"
         +"<div class='switch form-group'>"
         +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
         +"</div>"
