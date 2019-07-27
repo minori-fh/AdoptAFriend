@@ -337,11 +337,15 @@ $(document).on("click",".submit", function(){
     console.log(comment)
 
     if (comment === ""){
+
+        console.log("emptyAF")
         if($(this).siblings(".form-group").children("#comment-empty").length === 0){
             $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Comment cannot be empty!<p>")
         }
 
     } else {
+
+        console.log("notemptyAF")
         $.ajax({
             method: "POST",
             url: "/doges/" + id,
