@@ -22,8 +22,8 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class ='logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -36,8 +36,8 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
@@ -50,8 +50,8 @@ function getAll(){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -137,8 +137,8 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -151,7 +151,7 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
@@ -164,8 +164,8 @@ function getAgency(agency){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -189,8 +189,8 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/petsMart.png' width='70px'>"
                 + "</div> </div>"
@@ -203,8 +203,8 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/rocketDog.png' width='40px'>"
                 + "</div> </div>"
@@ -217,8 +217,8 @@ function getBreed(breed){
                 + "<div class='card-body'>"
                 + "<h5 class='card-title'>" + data[i].name + "</h5>"
                 + "<p class='card-text'>" + data[i].breed + "</p>"
-                + "<button id='see-comment'> See comments </button><button id='write-comment'> See comments </button>"
-                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comment</b></p>"
+                + "<button id='see-comment'> See comments </button><button id='write-comment'> Write comments </button>"
+                // + "<p id='see-comment'><b>See comments</b></p><p id='write-comment'><b>Write comments</b></p>"
                 + "<a href='" + data[i].moreInfo + "' class='more-info btn visit-site-btn'> Visit Site </a>"
                 + "<img class = 'logo' src='style/images/hss.jpg' width='30px'>"
                 + "</div> </div>"
@@ -228,14 +228,14 @@ function getBreed(breed){
     });
 }
 
-// Event handler for when user clicks on 'write comment'
+// Event handler for when user clicks on 'Write comments'
 $(document).on("click","#write-comment",function(){
     var card = $(this).parents(".card")
 
     // Hide the doge display in card and append a textarea for user to write his/her comment
     card.children().hide()
     card.append(
-        "<p class='switch write-comment-description'>Write comment:</p>"
+        "<p class='switch write-comment-description'>Write comments:</p>"
         +"<div class='switch form-group'>"
         +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
         +"</div>"
@@ -244,7 +244,7 @@ $(document).on("click","#write-comment",function(){
     )
 });
 
-// Event handler for when user clicks 'go back' on the write comment card
+// Event handler for when user clicks 'go back' on the Write comments card
 $(document).on("click",".go-back", function(){
     var card = $(this).parents(".card")
     // Show the original contents of the card and hide the textarea for writing comments
