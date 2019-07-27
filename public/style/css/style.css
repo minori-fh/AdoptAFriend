@@ -9,6 +9,7 @@ body{
     max-width: 100%; 
 }
 
+/* Nav styling */
 #nav-header{
     font-family: 'Lato', sans-serif;
     font-size: 16px; 
@@ -30,9 +31,10 @@ body{
     max-width: 100%; 
 }
 
+/* Home page styling */
 .home-title, .home-description, .home-logo, .home-tagline, .support-header{
     text-align: center !important; 
-    color: rgb(16, 16, 39); 
+    color: rgb(37, 37, 65); 
 }
 
 .home-title {
@@ -63,6 +65,7 @@ body{
     display: inline-block;
 }
 
+/* Jumbotron (agencies we support) styling */
 .jumbotron {
     width: 60% !important; 
     margin: 0 auto !important; 
@@ -74,7 +77,7 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#card-search-btn{
+#card-search-btn, #card-learn-btn {
     background-color: rgb(255, 141, 141) !important;
     color: white; 
     font-weight: bold; 
@@ -83,6 +86,10 @@ body{
     margin: 0 auto !important; 
     margin-top: 2% !important; 
     font-family: 'Heebo', sans-serif;
+}
+
+#card-learn-btn {
+    background-color: rgb(37, 37, 65) !important;
 }
 
 .text-center {
@@ -94,6 +101,9 @@ body{
     margin-right: 8%; 
 }
 
+
+
+/* ~~~~~~~~~~~~~ */
 .card {
     width: 23% !important; 
     margin-bottom: 2%; 
