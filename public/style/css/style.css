@@ -144,12 +144,11 @@ body{
 
 .visit-site-btn{
     background-color: rgb(255, 141, 141) !important;
-    color: white; 
-    font-weight: bold; 
+    color: white;  
     border-radius: 25px !important; 
-    font-size: 14px !important;  
+    font-size: 12px !important;  
     font-family: 'Heebo', sans-serif;
-    left: 2px; 
+    left:  4px; 
 }
 
 .visit-site-btn, .logo{
