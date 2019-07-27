@@ -343,6 +343,9 @@ $(document).on("click",".submit", function(){
 
     } else {
 
+        $(this).siblings(".form-group").siblings(".write-comment-description").text("Write comments:")
+        $(this).siblings(".form-group").siblings(".write-comment-description").removeClass("comment-empty")
+
         console.log("notemptyAF")
         $.ajax({
             method: "POST",
