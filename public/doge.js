@@ -242,6 +242,7 @@ $(document).on("click",".go-back", function(){
     // Show the original contents of the card and hide the textarea for writing comments
     card.children().show()
     card.children(".switch").hide()
+    card.children(".go-back").hide()
 });
 
 // Event handler for when user clicks 'submit' to submit a comment
