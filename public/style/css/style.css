@@ -109,6 +109,10 @@ body{
 }
 
 /* Display elements styling */
+#display {
+    background-color: rgb(37, 37, 65);
+}
+
 /* Sidebar elements styling */
 #sidebar {
     margin-top: 2%; 
