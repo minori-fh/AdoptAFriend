@@ -61,10 +61,17 @@ function getAll(){
 
             breeds.push(data[i].breed)
 
-            $("#dropdown-breed").append(
-                "<button class='dropdown-item breed' type='button' name='" + data[i].breed + "'>" + data[i].breed + "</button>"
-            )
+            // $("#dropdown-breed").append(
+            //     "<button class='dropdown-item breed' type='button' name='" + data[i].breed + "'>" + data[i].breed + "</button>"
+            // )
             
+        }
+
+        breeds.sort();
+        for (var i=0; i<breeds.length; i++){
+            $("#dropdown-breed").append(
+                "<button class='dropdown-item breed' type='button' name='" + breeds[i] + "'>" + breeds[i] + "</button>"
+            )
         }
 
         $("#display").hide()
@@ -139,6 +146,12 @@ $(document).on("click","#see-all", function(){
                     + "</div> </div>"
                 )
             }
+
+            $("#dropdown-breed").append(
+                "<span class='dropdown-header dropdown-item-text' id='filter-by-breed'><b>FILTER BY BREED</b></span>"
+            )
+
+            
     
             if (breeds.indexOf(data[i].breed) < 0){
     
