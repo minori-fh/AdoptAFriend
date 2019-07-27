@@ -33,7 +33,7 @@ body{
 .home-tagline{
     font-size: 20px; 
     font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 158, 158); 
+    color: rgb(255, 141, 141); 
 }
 
 .support-header{
@@ -57,7 +57,7 @@ body{
 }
 
 #card-search-btn{
-    background-color: rgb(255, 158, 158) !important;
+    background-color: rgb(255, 141, 141) !important;
     color: white; 
     font-weight: bold; 
     border-radius: 25px !important; 
