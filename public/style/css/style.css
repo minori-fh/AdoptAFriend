@@ -210,14 +210,6 @@ body{
 /* ~~~~~~~~~~~~~ */
 
 #see-comment, #write-comment {
-    /* font-size: 10px; 
-    font-family: 'Heebo', sans-serif;
-    width: 50%; 
-    margin: 0px; 
-    margin-bottom: 3px; 
-    display: inline-block;
-    color: green; 
-    cursor: default;  */
     background-color: rgb(100, 187, 100) !important;
     color: white !important; 
     font-size: 10px !important;  
