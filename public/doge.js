@@ -337,7 +337,7 @@ $(document).on("click",".submit", function(){
     console.log(comment)
 
     if (comment === ""){
-        $(this).append("Comment cannot be empty")
+        $(this).siblings(".form-group").children("textarea").val("Comment cannot be empty")
 
     } else {
         $.ajax({
