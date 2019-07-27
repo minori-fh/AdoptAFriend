@@ -122,6 +122,10 @@ body{
     color: white !important; 
 }
 
+#see-all #filter-by-agency, #filter-by-breed {
+    font-size: 20px; 
+}
+
 .dropdown-header{
     margin-top: 5%; 
     font-size: 17px; 
