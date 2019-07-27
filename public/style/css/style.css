@@ -222,17 +222,19 @@ body{
     font-size: 13px; 
     font-weight: bold; 
     cursor: default; 
+    margin-left: 3%; 
 }
 
 .write-comment-description {
     font-family: 'Lato', sans-serif;
+    margin-left: 3%;
+    margin-top: 2%; 
 }
 
 .form-group{
     height: 60% !important; 
     margin-left: 2%;
     margin-right: 2%; 
-    border: solid grey 1px; 
 }
 
 .comment-body {
