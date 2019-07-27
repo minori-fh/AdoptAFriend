@@ -228,7 +228,7 @@ $(document).on("click","#write-comment",function(){
     card.children().hide()
     card.append(
         "<div class='switch form-group'>"
-        +"<label for='exampleFormControlTextarea1'>Write comment:</label>"
+        +"<label for='exampleFormControlTextarea1' class='write-comment-description>Write comment:</label>"
         +"<textarea class='form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
         +"<p class='submit'>Submit</p>"
         +"</div>"

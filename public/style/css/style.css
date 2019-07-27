@@ -162,7 +162,6 @@ body{
 
 .card-img-top {
     height: 55% !important; 
-    border: solid black 4px !important; 
 }
 
 .card-text {
@@ -217,6 +216,18 @@ body{
     cursor: default; 
 }
 
+.submit{
+    font-family: 'Heebo', sans-serif;
+    color: green; 
+    font-size: 13px; 
+    font-weight: bold; 
+    cursor: default; 
+}
+
+.write-comment-description {
+    font-family: 'Lato', sans-serif;
+}
+
 .form-group{
     height: 80% !important; 
     margin-left: 2%;
@@ -232,6 +243,7 @@ body{
     color: rgb(179, 6, 6);
     font-size: 10px; 
     margin-bottom: 3%; 
+    font-family: 'Heebo', sans-serif;
 }
 
 #main-comment {
@@ -240,12 +252,5 @@ body{
 
 #no-comment {
     color: green; 
-}
-
-.submit {
-    color: green; 
-    font-size: 13px; 
-    font-weight: bold; 
-    cursor: default; 
 }
 
