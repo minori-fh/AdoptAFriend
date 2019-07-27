@@ -143,9 +143,9 @@ body{
 }
 
 .visit-site-btn{
-    background-color: rgb(255, 141, 141) !important;
+    background-color: rgb(255, 207, 207) !important;
     color: white;  
-    border-radius: 25px !important; 
+    border-radius: 10px !important; 
     font-size: 12px !important;  
     font-family: 'Heebo', sans-serif;
     left:  4px; 
