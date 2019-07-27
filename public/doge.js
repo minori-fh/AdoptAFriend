@@ -92,6 +92,9 @@ $(document).on("click","#see-all", function(){
 
     $("#doges").empty();
     $("#dropdown-breed").empty();
+    $("#dropdown-breed").append(
+        "<span class='dropdown-header dropdown-item-text' id='filter-by-breed'><b>FILTER BY BREED</b></span>"
+    )
 
     $.getJSON("/doges", function(data){
         console.log(data.length)
@@ -145,12 +148,6 @@ $(document).on("click","#see-all", function(){
                     + "</div> </div>"
                 )
             }
-
-            $("#dropdown-breed").append(
-                "<span class='dropdown-header dropdown-item-text' id='filter-by-breed'><b>FILTER BY BREED</b></span>"
-            )
-
-            
     
             if (breeds.indexOf(data[i].breed) < 0){
     
