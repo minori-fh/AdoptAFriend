@@ -339,6 +339,7 @@ $(document).on("click",".submit", function(){
     if (comment === ""){
 
         $(this).siblings(".form-group").siblings(".write-comment-description").text("Comment cannot be empty!")
+        $(this).siblings(".form-group").siblings(".write-comment-description").addClass("comment-empty")
 
     } else {
 
