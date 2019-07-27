@@ -123,7 +123,7 @@ body{
 }
 
 #see-all #filter-by-agency, #filter-by-breed {
-    font-size: 20px; 
+    font-size: 20px !important; 
 }
 
 .dropdown-header{
