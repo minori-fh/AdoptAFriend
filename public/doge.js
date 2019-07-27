@@ -341,7 +341,7 @@ $(document).on("click",".submit", function(){
     if (comment === ""){
 
         if($(this).siblings(".form-group").children("textarea").val() === ""){
-            $(this).siblings(".form-group").children("textarea").val("Comment cannot be empty!")
+            $(this).siblings(".form-group").children("textarea").prepend("<p class='comment-empty'> Comment cannot be empty! </p>")
         } 
 
     } else {
