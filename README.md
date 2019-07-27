@@ -13,15 +13,15 @@ This site was deployed using Heroku with the mongolab add-on.
 [Click here to visit site](https://adopt-a-friend.herokuapp.com/)
 
 Initial home page: 
-![Home page](public/style/images/site-images/site1.gif)
+![Home page](public/style/images/site-images/site1.png)
 
-Seeing doges by adoption agency: 
+Seeing doges by adoption agency or by breed: 
 ![By agency](public/style/images/site-images/site2.gif)
 
-Seeing doges by breed: 
+Reading, creating, and deleting comments on dogs: 
 ![By breed](public/style/images/site-images/site3.gif)
 
-Reading, creating, and deleting comments on doges: 
+Form validation to ensure that comments are not empty: 
 ![Comments](public/style/images/site-images/site4.gif)
 
 ## Improvements for the Future
