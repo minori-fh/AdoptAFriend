@@ -203,6 +203,7 @@ body{
 
 #see-comment, #write-comment {
     font-size: 10px; 
+    font-family: 'Heebo', sans-serif;
     width: 50%; 
     margin: 0px; 
     margin-bottom: 3px; 
