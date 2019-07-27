@@ -141,6 +141,10 @@ body{
     color: black !important; 
 }
 
+.dropdown-item:active{
+    color: black !important; 
+}
+
 /* Doge display card element */
 #doges {
     margin-top: 3%; 

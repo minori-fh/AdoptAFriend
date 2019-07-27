@@ -1,7 +1,6 @@
 getAll()
 
 // Function to append all doges to HTML DOM
-
 function getAll(){
     $("#doges").empty();
     
@@ -155,8 +154,6 @@ $(document).on("click","#see-all", function(){
                 )
                 
             }
-    
-            // $("#display").hide()
         };
         });
 });
