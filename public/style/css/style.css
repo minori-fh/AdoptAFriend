@@ -229,9 +229,10 @@ body{
 }
 
 .form-group{
-    height: 80% !important; 
+    height: 60% !important; 
     margin-left: 2%;
     margin-right: 2%; 
+    border: solid grey 1px; 
 }
 
 .comment-body {
