@@ -162,6 +162,7 @@ body{
 
 .card-img-top {
     height: 55% !important; 
+    border: solid rgb(253, 208, 149) 9px !important; 
 }
 
 .card-text {
