@@ -338,7 +338,7 @@ $(document).on("click",".submit", function(){
 
     if (comment === ""){
         if($(this).siblings(".form-group").children("#comment-empty").length === 0){
-            $(this).siblings(".form-group").append("<p id='comment-empty'>Comment cannot be empty!<p>")
+            $(this).siblings(".form-group").append("<p class='switch' id='comment-empty'>Comment cannot be empty!<p>")
         }
 
     } else {
