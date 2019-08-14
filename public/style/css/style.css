@@ -64,7 +64,7 @@ body{
 .support-header{
     font-size: 30px; 
     font-family: 'Lato', sans-serif;
-    margin-bottom: 3%; 
+    margin-bottom: 5%; 
 
 }
 
@@ -74,6 +74,8 @@ body{
 
 /* Jumbotron (agencies we support) styling */
 .jumbotron {
+    display: flex;
+    align-items: center; 
     width: 60% !important; 
     margin: 0 auto !important; 
     height: 35% !important; 
@@ -83,6 +85,10 @@ body{
     background-color: white !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#jumbotron-child{
+    width: 100%;
+} 
 
 #card-search-btn, #card-learn-btn {
     background-color: rgb(255, 141, 141) !important;
@@ -274,6 +280,79 @@ body{
 }
 
 #no-comment {
-    color: green; 
+    color: green 
 }
+
+/* media queries */
+@media (max-width: 725px){
+    .support-logo{
+        width: 80px; 
+    }
+}
+
+@media (max-width: 521px){
+    .support-logo{
+        width: 70px; 
+    }
+}
+
+@media (max-width: 455px){
+    .support-logo{
+        width: 60px; 
+    }
+    .home-description, .support-header{
+        font-size: 26px; 
+    }
+    .home-title{
+        font-size: 46px; 
+    }
+}
+
+@media (max-width: 455px){
+    .support-logo{
+        width: 55px; 
+    }
+    .home-description, .support-header{
+        font-size: 21px; 
+    }
+    .home-title{
+        font-size: 42px; 
+    }
+}
+
+@media (max-width: 400px){
+    .support-logo{
+        display: block; 
+        margin-left: 0px !important; 
+        margin-right: 0px !important; 
+        margin-bottom: 3%; 
+    }
+    .jumbotron{
+        height: 45% !important; 
+    }
+    #agency-logos{
+        margin-left: 38% !important; 
+    }
+}
+
+@media (max-width: 345px){
+    #main-logo{
+        width: 120px !important; 
+    }
+    .home-title{
+        font-size: 38px; 
+    }
+    .home-description, .support-header{
+        font-size: 22px; 
+    }
+    .home-tagline{
+        font-size: 16px; 
+    }
+    #card-search-btn, #nav-search-btn {
+        font-size: 12px !important; 
+    }
+}
+
+
+
 
