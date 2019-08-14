@@ -151,6 +151,12 @@ body{
     color: black !important; 
 }
 
+.dropdown-item:focus{
+    color: black !important; 
+    border: none !important; 
+    outline: 0 !important; 
+}
+
 /* Doge display card element */
 #doges {
     margin-top: 3%; 
@@ -283,7 +289,35 @@ body{
     color: green 
 }
 
+/* Styling for collapsed navbar */
+.pos-f-t{
+    display: none; 
+}
+
 /* media queries */
+@media (max-width: 1140px){
+    .pos-f-t{
+        display: inherit; 
+        width: 100%;
+        background-color: rgb(29, 29, 49);
+    }
+
+    #navbar-collapsed{
+        background-color: rgb(29, 29, 49) !important;
+    }
+    #sidebar{
+        display: none; 
+        flex-direction: column; 
+        overflow: hidden; 
+    }
+    .dropdown{
+        display: block; 
+        float: left
+    }
+    #doges{
+        width: 135%; 
+    }
+}
 @media (max-width: 725px){
     .support-logo{
         width: 80px; 
