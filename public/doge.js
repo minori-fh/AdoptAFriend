@@ -206,6 +206,8 @@ $(document).ready(function() {
                 }
             };
             });
+
+            setTimeout(checkSmallWindow(), 1000)
     });
 
     function checkSmallWindow(){
