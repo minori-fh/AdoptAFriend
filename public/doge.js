@@ -6,6 +6,7 @@ $(document).ready(function() {
         //if the sidebar is displayed --> hide sidebar
         if(display === "flex"){
             $("#sidebar").css("display", "none")
+            $("#display-div").css("display", "inherit")
             $("#display-div").removeClass("col-md-9")
             $("#display-div").addClass("col-md-12")
         // if the sidebar is not displayed --> show sidebar
@@ -13,8 +14,15 @@ $(document).ready(function() {
             $("#sidebar").css("display", "inherit")
             $("#display-div").removeClass("col-md-12")
             $("#display-div").addClass("col-md-9")
-        }
 
+            if($(window).width()<=767){
+                let sidebarDisplay = $("#sidebar").css("display")
+                console.log(sidebarDisplay)
+                if(sidebarDisplay === 'flex'){
+                    $("#display-div").css("display", "none")
+                }
+            };
+        }
     });
 
     function checkSize(){
@@ -38,6 +46,16 @@ $(document).ready(function() {
             $("#sidebar").css("display", "none")
             $("#display-div").removeClass("col-md-9");
             $("#display-div").addClass("col-md-12");
+
+
+            // if($(window).width()<=767){
+            //     let sidebarDisplay = $("#sidebar").css("display")
+            //     console.log(sidebarDisplay)
+            //     if(sidebarDisplay === 'inherit'){
+            //         $("#display-div").css("display", "none")
+            //     }
+            // };
+
         } else if ($(window).width()>1140){
             $("#sidebar").css("display", "inherit")
             $(".pos-f-t").css("display", "none")
@@ -214,8 +232,9 @@ $(document).ready(function() {
         if($(window).width()<=767){
             console.log("hideit")
             $("#sidebar").css("display", "none")
+            $("#display-div").css("display", "inherit")
         }
-    }
+    };
     
     
     // Event handler to get doges of a particular agency when user clicks on an agency
