@@ -40,25 +40,36 @@ $(document).ready(function() {
 
     checkSize()
 
+    // if($(window).width()<=767){
+    //     let sidebarDisplay = $("#sidebar").css("display")
+    //     console.log(sidebarDisplay)
+    //     if(sidebarDisplay === 'flex'){
+    //         $("#display-div").css("display", "none")
+    //     }
+    // };
+
     $(window).resize(function(){
+
+        let sidebarDisplay = $("#sidebar").css("display")
+        if(sidebarDisplay != "flex"){
+            $("#display-div").css("display", "inherit")
+        }
+
         if($(window).width()<=1140){
             $(".pos-f-t").css("display", "inherit")
             $("#sidebar").css("display", "none")
             $("#display-div").removeClass("col-md-9");
             $("#display-div").addClass("col-md-12");
 
-
-            // if($(window).width()<=767){
-            //     let sidebarDisplay = $("#sidebar").css("display")
-            //     console.log(sidebarDisplay)
-            //     if(sidebarDisplay === 'inherit'){
-            //         $("#display-div").css("display", "none")
-            //     }
-            // };
+            if($(window).width()>767){
+                console.log("wtf")
+                $("#display-div").css("display","inherit");
+            };
 
         } else if ($(window).width()>1140){
             $("#sidebar").css("display", "inherit")
             $(".pos-f-t").css("display", "none")
+            $("#display-div").css("display", "inherit")
             $("#display-div").removeClass("col-md-12")
             $("#display-div").addClass("col-md-9")
         }
