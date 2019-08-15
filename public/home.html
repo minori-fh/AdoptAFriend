@@ -32,7 +32,7 @@
             Adopt a Friend
         </div>
         <div class='home-logo'>
-            <img id="logo" src="style/images/logo.png" width="150px">
+            <img id="main-logo" src="style/images/logo.png" width="150px">
         </div>
         <div class='home-description'>
             Meet your New Best Friend!
@@ -42,24 +42,32 @@
         </div>
 
         <div class="jumbotron">
-            <h3 class="support-header">Agencies We Support</h3>
-            <div class='text-center'>
-                <img class="support-logo" src="style/images/hss.jpg" width="100px">
-                <img class="support-logo" id='petsMart-logo' src="style/images/petsMart.png" width="140px">
-                <img class="support-logo" src="style/images/rocketDog.png" width="100px"><br>
-            </div>
-            <div class='text-center'>
-                <a class="btn btn-lg search" id='card-search-btn' href="#" role="button">FIND LOVE</a>
+            <div id='jumbotron-child'>
+                <h3 class="support-header">Agencies We Support</h3>
+                <div class='text-center' id='agency-logos'>
+                    <img class="support-logo" src="style/images/hss.jpg" width="100px">
+                    <img class="support-logo" id='petsMart-logo' src="style/images/petsMart.png" width="140px">
+                    <img class="support-logo" src="style/images/rocketDog.png" width="100px"><br>
+                </div>
+                <div class='text-center'>
+                    <a class="btn btn-lg search" id='card-search-btn' href="#" role="button">FIND LOVE</a>
+                </div>
             </div>
         </div>
     </section>
 
     <div class = "row" id="display">
+        <div class="pos-f-t">
+            <nav class="navbar navbar-dark bg-dark" id='navbar-collapsed'>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
         <div class = "col-md-3" id="sidebar">
                 <div class = "dropdown" id = "dropdown-agency" aria-labelledby="dropdownMenu1"> 
                     <button class="dropdown-header dropdown-item" type="button" id='see-all'><b>SEE ALL</b></button>
                 </div>  
-                
                 <div class = "dropdown" id = "dropdown-agency" aria-labelledby="dropdownMenu1"> 
                     <span class="dropdown-header dropdown-item-text"><b id='filter-by-agency'>FILTER BY AGENCY</b></span>
                     <button class="dropdown-item agency" type="button" name="petsMart">PETSMART</button>
@@ -72,8 +80,8 @@
                 </div>  
 
         </div>
-        <div class = "col-md-9">
-            <div id="doges">
+        <div class = "col-md-9" id='display-div'>
+            <div class ='row' id="doges">
 
             </div>
         </div>
