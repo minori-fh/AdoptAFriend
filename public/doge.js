@@ -3,11 +3,46 @@ $(document).ready(function() {
 
     $(".navbar-toggler").on("click", function(){
         let display = $("#sidebar").css("display")
-
+        //if the sidebar is displayed --> hide sidebar
         if(display === "flex"){
             $("#sidebar").css("display", "none")
+            $("#display-div").removeClass("col-md-9")
+            $("#display-div").addClass("col-md-12")
+        // if the sidebar is not displayed --> show sidebar
         } else if (display === "none"){
             $("#sidebar").css("display", "inherit")
+            $("#display-div").removeClass("col-md-12")
+            $("#display-div").addClass("col-md-9")
+        }
+
+    });
+
+    function checkSize(){
+        let mediaquery = $(".pos-f-t").css("display")
+        console.log(mediaquery)
+ 
+        if(mediaquery === 'flex'){
+            $("#display-div").removeClass("col-md-9")
+            $("#display-div").addClass("col-md-12")
+        } else if(mediaquery !== 'flex'){
+            $("#display-div").removeClass("col-md-12")
+            $("#display-div").addClass("col-md-9")
+        };
+    };
+
+    checkSize()
+
+    $(window).resize(function(){
+        if($(window).width()<=1140){
+            $(".pos-f-t").css("display", "inherit")
+            $("#sidebar").css("display", "none")
+            $("#display-div").removeClass("col-md-9");
+            $("#display-div").addClass("col-md-12");
+        } else if ($(window).width()>1140){
+            $("#sidebar").css("display", "inherit")
+            $(".pos-f-t").css("display", "none")
+            $("#display-div").removeClass("col-md-12")
+            $("#display-div").addClass("col-md-9")
         }
     });
     
@@ -172,6 +207,13 @@ $(document).ready(function() {
             };
             });
     });
+
+    function checkSmallWindow(){
+        if($(window).width()<=767){
+            console.log("hideit")
+            $("#sidebar").css("display", "none")
+        }
+    }
     
     
     // Event handler to get doges of a particular agency when user clicks on an agency
@@ -183,6 +225,9 @@ $(document).ready(function() {
             url: "/agency/" + agency
         });
         getAgency(agency)
+
+        setTimeout(checkSmallWindow(), 1000)
+
     });
     
     // Event handler to get all doges of a particular breed when user clicks on a breed 
@@ -194,6 +239,8 @@ $(document).ready(function() {
             url: "/breed/" + breed
         });
         getBreed(breed)
+
+        setTimeout(checkSmallWindow(), 1000)
     });
     
     // Event handler for scrolling down animation

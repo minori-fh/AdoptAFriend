@@ -126,6 +126,7 @@ body{
     margin-top: 2%; 
     font-family: 'Lato', sans-serif;
     color: white !important; 
+    flex-direction: column; 
 }
 
 #see-all #filter-by-agency, #filter-by-breed {
@@ -161,10 +162,11 @@ body{
 #doges {
     margin-top: 3%; 
     margin-bottom: 3%; 
+    height: 100%; 
 }
 
 .card {
-    width: 23% !important; 
+    width: 225px !important; 
     margin-bottom: 2%; 
     float: left; 
     margin-left: 1%; 
@@ -289,10 +291,20 @@ body{
     color: green 
 }
 
+#display-div{
+    padding-left: 10%; 
+}
+
 /* Styling for collapsed navbar */
 .pos-f-t{
     display: none; 
+    width: 100%; 
+    background-color: rgb(29, 29, 49);;
 }
+#navbar-collapsed{
+    background-color: rgb(29, 29, 49) !important;
+}
+
 
 /* media queries */
 @media (max-width: 1140px){
@@ -307,15 +319,13 @@ body{
     }
     #sidebar{
         display: none; 
-        flex-direction: column; 
-        overflow: hidden; 
     }
     .dropdown{
         display: block; 
         float: left
     }
-    #doges{
-        width: 135%; 
+    #display{
+        position: relative; 
     }
 }
 @media (max-width: 725px){
