@@ -62,10 +62,9 @@ var CommentSchema = new Schema({
 ## Improvements for the Future
 Some improvements that I would like to make to this application provided more time: 
 
-1. Mobile responsiveness for the sidemenu 
-2. Incorporate user authentication to allow users to save certain dogs on their account to visit later
-3. Ability to update the comments that users have already left on a dog
-4. Refactoring code to use ES6 syntax
+1. Incorporate user authentication to allow users to save certain dogs on their account to visit later
+2. Ability to update the comments that users have already left on a dog
+3. Refactoring code to use ES6 syntax
 
 ## Getting Started
 These instructions will help get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -77,10 +76,20 @@ What you will need to install before running this application:
 2. [NPM](https://docs.npmjs.com/cli/install)
 3. [Mongod](https://www.mongodb.com/download-center/community)
 
-Node packages used can be installed afterwards by running npm install in your terminal:
+Once the above are installed, install server dependencies:
 ```
-npm i
+# open a new shell and navigate to server directory
+$ npm i
+# this will install all the dependencies for the server portion of this application
 ```
+
+Make sure that MongoDB is started on your machine before starting the server:
+```
+$ mongod
+# once server dependencies are installed and MongoDB is started, navigate to the AdoptAFriend directory and start the server
+$ node server.js
+```
+
 
 ## Built with: 
 1. [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
