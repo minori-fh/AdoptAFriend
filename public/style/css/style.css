@@ -298,6 +298,7 @@ textarea{
     background: none !important;
     border: none !important;
     padding-left: 0px;
+    margin-left: 3%; 
 }
 
 #main-comment {
