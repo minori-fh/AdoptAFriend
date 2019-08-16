@@ -402,7 +402,7 @@ $(document).ready(function() {
             +"<div class='switch form-group'>"
             +"<textarea class='comment-value form-control' id='exampleFormControlTextarea1' rows='6'></textarea>"
             +"</div>"
-            +"<p class='submit'>Submit</p>"
+            +"<button class='submit'>Submit</button>"
             +"<button class='switch more-info btn go-back'> Go back </button>"
         )
     });
@@ -476,7 +476,7 @@ $(document).ready(function() {
     
                 for (var i=0; i< data.comment.length; i++){
                     console.log(data.comment[i].body)
-                    card.prepend("<p class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</p>")
+                    card.prepend("<button class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</button>")
                     card.prepend("<p class='switch comment-body' id='main-comment' comment-id='"+ data.comment[i]._id + "'>" + data.comment[i].body + "</p>")
                 }
     
@@ -514,7 +514,7 @@ $(document).ready(function() {
         
                     for (var i=0; i< data.comment.length; i++){
                         console.log(data.comment[i].body)
-                        card.prepend("<p class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</p>")
+                        card.prepend("<button class='switch comment-body delete' data-id='" +  data.comment[i]._id + "'>delete</button>")
                         card.prepend("<p class='switch comment-body' id='main-comment' comment-id='"+ data.comment[i]._id + "'>" + data.comment[i].body + "</p>")
                     }
         

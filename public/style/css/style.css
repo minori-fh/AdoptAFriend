@@ -249,11 +249,16 @@ body{
 
 .submit{
     font-family: 'Lato', sans-serif;
+    background-color: none !important; 
+    border: none !important; 
     color: green; 
     font-size: 13px; 
     font-weight: bold; 
     cursor: default; 
     margin-left: 3%; 
+    width: 30%;
+    margin-bottom: 10%;
+    margin-left: 0px;
 }
 
 .write-comment-description {
@@ -287,6 +292,10 @@ textarea{
     font-size: 10px; 
     margin-bottom: 3%; 
     font-family: 'Lato', sans-serif;
+    width: 25%;
+    background: none !important;
+    border: none !important;
+    padding-left: 0px;
 }
 
 #main-comment {
