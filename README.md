@@ -78,7 +78,7 @@ What you will need to install before running this application:
 
 Once the above are installed, install server dependencies:
 ```
-# open a new shell and navigate to server directory
+# open a new shell and navigate to AdoptAFriend directory
 $ npm i
 # this will install all the dependencies for the server portion of this application
 ```
