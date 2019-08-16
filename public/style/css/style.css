@@ -118,7 +118,8 @@ body{
 #display {
     background-color: rgb(37, 37, 65);
     margin-left: 0px; 
-    margin-right: 0px; 
+    margin-right: 0px;
+    padding-bottom: 5%;  
 }
 
 /* Sidebar elements styling */
@@ -166,7 +167,7 @@ body{
 }
 
 .card {
-    width: 225px !important; 
+    width: 200px !important; 
     margin-bottom: 2%; 
     float: left; 
     margin-left: 1%; 
@@ -217,7 +218,7 @@ body{
     color: white !important; 
     font-size: 14px !important;  
     font-family: 'Lato', sans-serif;
-    width: 35%; 
+    width: 40%; 
     position: relative; 
     bottom: 4px !important; 
     left: 4px !important; 
@@ -232,21 +233,22 @@ body{
     color: white !important; 
     font-size: 10px !important;  
     font-family: 'Lato', sans-serif;
-    width: 43%; 
+    width: 48%; 
     border: none !important; 
     border-radius: 4px !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #write-comment {
-    background-color: white !important; 
+    display: block; 
+    margin-top: 1%; 
+    background-color: rgb(255, 255, 255) !important; 
     color: rgb(37, 37, 65) !important; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-left: 2%; 
 }
 
 .submit{
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: green; 
     font-size: 13px; 
     font-weight: bold; 
@@ -266,6 +268,10 @@ body{
     margin-right: 2%; 
 }
 
+textarea{
+    font-family: 'Lato', sans-serif;
+}
+
 .comment-body {
     padding-left: 3%;
     padding-right: 3%; 
@@ -274,13 +280,13 @@ body{
 .comment-empty {
     font-size: 10px; 
     color: rgb(179, 6, 6); 
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 .delete {
     color: rgb(179, 6, 6);
     font-size: 10px; 
     margin-bottom: 3%; 
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 #main-comment {
@@ -288,7 +294,8 @@ body{
 }
 
 #no-comment {
-    color: green 
+    color: green; 
+    font-family: 'Lato', sans-serif;
 }
 
 #display-div{
